@@ -1,0 +1,31 @@
+# Cloudflare Worker — Indonesia Economic Dashboard
+#
+# Port dari Flask + SQLite + APScheduler (repo hafazahh/indonesia-economic-dashboard)
+# ke Workers + D1. Local dev works out of the box: `wrangler dev` spins up local
+# D1 (SQLite). The placeholder ID below is only used against the real Cloudflare API.
+#
+# NOTE: custom domain is set via the dashboard, NOT here. Adding `routes` to this
+# file does NOT reliably activate custom-domain routing (see skill cloudflare-worker-api).
+
+name = "inthiseconomy-worker"
+main = "src/index.ts"
+compatibility_date = "2026-10-21"
+
+# D1 — economic time series (ported from economic_data.db / models.py)
+[[d1_databases]]
+binding = "DB"
+database_name = "inthiseconomy-db"
+database_id = "5c49ae6d-3318-421a-bf55-f20d3b4e90b0"
+
+# KV — rendered HTML cache (CPU limit on free tier is 10ms/invocation)
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = "f4e71de19c104525acebe9b09f85b94c"
+
+[vars]
+ENVIRONMENT = "production"
+SITE_URL = "https://inthiseconomy.choirulhaq.com"
+
+# Refresh data every 6 hours (replaces APScheduler in scheduler.py)
+[triggers]
+crons = ["0 */6 * * *"]

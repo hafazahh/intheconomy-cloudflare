@@ -377,3 +377,107 @@ plan kanonik ada di root dan sudah ter-track).
 **Sisa:** belum ada salinan Drive untuk project ini
 (`~/GoogleDrive/AhliPemrograman/indonesia-economic-dashboard/` belum ada).
 Repo Flask juga tidak punya hook `post-commit`, jadi arsip Drive saat ini manual.
+
+---
+
+## Sesi 2026-10-22 — kartu t_7c752775 (programmer): halaman micro + rute
+
+**Goal:** pastikan halaman micro economy + `/micro`, `/micro-economy`,
+`/download/csv` memenuhi kriteria terima dan terverifikasi dari nol.
+
+**Kondisi awal:** kode sudah ada di disk & sudah ter-commit (`bd51579`) dari
+run induk sebelumnya. Dua run sebelumnya di kartu ini **tidak mengubah kode**
+(run 1 di-reclaim karena lock basi, run 2 kena rate-limit). Yang dikerjakan di
+sini: verifikasi independen + menutup celah test.
+
+**Diverifikasi (bukan self-report):**
+- `npx tsc --noEmit` → exit 0.
+- `node scripts/test_index_routes.mjs` → **26 PASS, 0 FAIL**.
+- `node scripts/test_micro.mjs` (BARU) → **66 PASS, 0 FAIL**.
+- `node scripts/test_charts_specs.mjs` 83/83 · `test_charts_db.mjs` 19/19 ·
+  `test_charts_e2e.mjs` 26/26 · `test_kpi_insight.mjs` 55/55 ·
+  `test_render_dashboard.mjs` 45/45 · `test_nonce_charts.mjs` 16/16.
+- Live (`wrangler dev` port 8788 masih jalan):
+  - `GET /micro` → 200 `text/html`, 25.839 B; `GET /micro-economy` → 200,
+    isi identik dengan `/micro` modulo nonce.
+  - `GET /download/csv` → 200 `text/csv`, header `Indicator,Code,Year,Value,Fetched At`.
+  - `verify_micro_charts.py :8788` → LULUS 23 pemeriksaan (chart == D1).
+  - `verify_micro_parity.py :8788` → SEMUA BANDINGAN HALAMAN MICRO LULUS
+    (KPI/metrik/asumsi/insight/dropdown == Flask; selisih hanya snapshot live
+    emas/IKK/kurs).
+  - `compare_csv_to_flask.py :8788` → SEMUA PEMERIKSAAN CSV LULUS (CSV == isi
+    `economic_data.db`).
+  - `verify_browser_charts.py /micro` → PASS: 5 chart (traces 1/1/1/1/2),
+    9 KPI terisi, 0 CSP violation.
+  - `test_security_headers.py` → 42/42 PASS.
+- Edge case live: `?daerah=aceh_sumut` → harga Aceh; `?daerah=bad` → jawa;
+  `?province=DKI Jakarta&daerah=sumbar_riau` → kedua select terpilih benar;
+  `?province=ZZZ` → label "ZZZ" + angka nasional (identik Flask).
+
+**Celah yang ditutup:** `scripts/test_index_routes.mjs` sengaja men-stub
+`./micro` + `./csv` (isolasi kartu `t_c5bed955`), sehingga port micro tidak punya
+test hermetic. `scripts/test_micro.mjs` baru: bundle `src/micro.ts` +
+`src/index.ts` asli (tanpa stub) di atas facade D1, 66 assertion — angka chart
+vs D1, titik terakhir BBM-vs-upah = harga terbitan daerah, anotasi >10%,
+fallback provinsi, nonce, dan 3 rute.
+
+**File berubah:** `scripts/test_micro.mjs` (baru). Tidak ada perubahan kode
+`src/` — port micro sudah benar; yang kurang hanya test yang menguncinya.
+`scripts/verify_micro_charts.py` masih ada perubahan belum di-commit dari run
+sebelumnya (glob file state D1 + akomodasi snapshot IKK) — dipertahankan.
+
+**Error:** RTK memblokir heredoc & loop bersarang → skrip ditulis ke file.
+Assertion awal `test_micro.mjs` salah 3 kali (insight ada di `additional_analysis`,
+regex IKK, dan container bbm-vs-upah yang memang selalu ada) — perbaiki
+assertion, bukan kode.
+
+---
+
+## Sesi 2026-10-22 (Ketua) — repo GitHub + hook Drive
+
+**1. Repo GitHub Worker dibuat + push**
+- Remote `origin` → `git@github.com:hafazahh/intheconomy-cloudflare.git`
+- URL: https://github.com/hafazahh/intheconomy-cloudflare (public, branch `main`)
+- Commit `bd51579` (46 file, +10469/-44) + `34acf78` (docs)
+- Verifikasi remote: `git ls-remote origin` → `refs/heads/main` = `bd51579` = HEAD
+  lokal; `gh repo view` → PUBLIC, default `main`; tree 55 entri
+- Pra-pemeriksaan repo publik: scan secret di `*.ts`/`*.mjs`/`*.json`/`*.toml`/`*.md`
+  → hanya komentar + type hasil generate. Tidak ada kredensial nyata
+- `.gitignore` ditambah: `__pycache__/`, `*.pyc`, `.planning/`
+
+**2. Hook `post-commit` → Google Drive (kedua repo)**
+
+Tujuan dipecah dua supaya tidak saling hapus:
+```
+GoogleDrive:AhliPemrograman/indonesia-economic-dashboard/
+├── flask/                     ← repo Flask (13 .py + templates + docs)
+└── inthiseconomy-cloudflare/  ← repo Worker (src/, scripts/, wrangler.toml)
+```
+
+Isi hook (kedua repo, `chmod 755`):
+- `rclone sync "$SRC" "$REMOTE_DEST"` dengan `--exclude` untuk `.git/**`,
+  `__pycache__/**`, `*.pyc`, `venv/**`, `.venv/**`, `.planning/**`, `*-wal`,
+  `*-shm` (+ `node_modules/**`, `.wrangler/**`, `inthiseconomy-cloudflare/**`
+  pada repo Flask)
+- `--delete-excluded` — WAJIB, kalau tidak file yang sudah pernah ikut ter-copy
+  tidak akan pernah dibersihkan dari Drive
+- `exit 0` di akhir — backup gagal tidak boleh memblokir commit
+
+**Pitfall yang ditemukan (sudah dicatat di skill `local-first-cloud-backup`):**
+- `--delete-excluded` perlu; tanpa itu exclude tidak pernah purge file lama
+- `--delete-excluded` berbahaya kalau tujuan memuat arsip repo bertingkat →
+  karena itu tujuan dipecah dua
+- `rclone move <src> <dest-di-dalam-dir-yg-sudah-ada>` mengubah SETIAP file
+  jadi direktori berisi dirinya sendiri (`is a directory not a file`). Sempat
+  merusak layout Drive; diperbaiki dengan `rclone purge` lalu sync ulang
+
+**Verifikasi hook (bukti nyata):**
+- `bash -n` kedua hook → OK
+- Layout Drive bersih: `flask/` + `inthiseconomy-cloudflare/`, tanpa `.planning/`,
+  `*-wal`, `*-shm`, `node_modules`, `.git/`
+- Jumlah file: CF 54, Flask 35
+- Run kedua kedua hook → exit 0, idempoten
+
+**Catatan operasional:** folder project sedang aktif ditulis worker kanban
+(`t_e8f910b2` parity running). Sinkronisasi bisa kena error transient
+`source file is being updated` — rclone retry (Attempt 2/3 succeeded), bukan bug.

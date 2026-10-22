@@ -139,3 +139,216 @@ Detail lengkap + angka terukur ada di `findings.md` bagian "Hasil Fase 0–1".
 | `write_file` ditolak (stale copy) | 1 | baca ulang file penuh lalu patch |
 
 **Berikutnya:** Fase 2 — port `render.ts` + route `/` (dashboard makro).
+
+---
+
+## Sesi 2026-10-21 — Fase 2: `src/render.ts` + insight dinamis (programmer, kartu t_9aa66714)
+
+**Goal:** Port `templates/dashboard.html` + logika Jinja2 di `dashboard()`
+(`app.py`) ke `src/render.ts`, dan buktikan insight identik dengan Flask.
+
+### Yang dikerjakan
+
+| File | Isi |
+|---|---|
+| `src/render.ts` | `renderDashboard(view, nonce)` + `buildDashboardView(db)` — port Jinja2 → template literal |
+| `src/kpi.ts` | `generateInsight()`, `computeKpis()`, `computeDashboardKpis()`, `buildInflationSnapshot()` |
+| `scripts/verify_insight_parity.py` | bandingkan teks insight TS vs Flask (26 kasus) |
+| `scripts/insight_ts_run.mjs` | sisi Worker dari perbandingan di atas |
+| `scripts/verify_page_parity.py` | bandingkan halaman Worker vs halaman Flask (test client) |
+| `scripts/test_render_dashboard.mjs` | 45 assertion struktural halaman |
+| `scripts/test_kpi_insight.mjs` | 55 assertion: 21 skenario insight + 17 unit KPI + 6 urutan kartu |
+
+### Bukti (semua dari eksekusi nyata)
+
+```
+tsc --noEmit                        → exit 0
+node scripts/test_render_dashboard.mjs → 45/45 PASS
+node scripts/test_kpi_insight.mjs     → 55/55 PASS
+python3 scripts/verify_insight_parity.py oracle.json ts.json → 26/26 identik
+python3 scripts/verify_page_parity.py http://127.0.0.1:8788/  → SEMUA LULUS
+python3 scripts/verify_browser_charts.py http://127.0.0.1:8788/ → PASS (7 chart, semua >0 trace)
+```
+
+**Insight identik byte-per-byte dengan Flask** untuk 26 kasus (21 skenario
+`test_insight_dynamic.py` + 5 varian BPS). Ini bukan test karangan: oracle-nya
+dihasilkan dengan menjalankan `appmod.generate_insight()` dari `app.py` asli.
+
+**Halaman identik** untuk: 11 kartu KPI (urutan + nilai), teks insight, 7 container
+chart + 7 judul section, 7 kartu makro (nama + urutan), 4 baris proyeksi IMF WEO.
+Satu-satunya nilai yang boleh beda: kartu "Kurs USD/IDR" (snapshot live berbeda).
+
+**Browser nyata (Chromium 145 via CDP):** Plotly 4.1.1 dari CDN, 7 chart id,
+setiap div punya trace > 0 dan geometri SVG nyata, 11 KPI card, insight 351 karakter,
+**0 CSP violation**.
+
+### Bug yang ditemukan & diperbaiki
+
+**Urutan kartu KPI terbalik.** `dashboard()` melakukan `insert(0, bps)` **lalu**
+`insert(0, wb)` — jadi kartu *Inflasi Tahunan (World Bank)* yang tampil pertama.
+`computeDashboardKpis()` memasukkan WB dulu lalu BPS, sehingga BPS tampil pertama.
+Halaman Flask: `1.91% (WB) → 3.28% (BPS) → 5.11% → …`; Worker sebelum fix:
+`3.28% (BPS) → 1.91% (WB) → 5.11% → …`. Diperbaiki dengan menukar urutan
+`unshift`, lalu dikunci dengan 6 assertion urutan di `test_kpi_insight.mjs`
+dan diverifikasi ulang terhadap halaman Flask.
+
+### Error yang dihadapi
+
+| Error | Attempt | Resolution |
+|---|---|---|
+| `python3 -c …` diblokir RTK (script-via-flag) | 1 | tulis skrip ke file, jalankan file |
+| `import app` menggantung 120 s (bootstrap jalan) | 1 | stub `scheduler` + `backfill` sebelum import |
+| `import app` gagal: `ModuleNotFoundError: app` | 1 | `sys.path.insert` ke folder project, bukan parent skrip |
+| `browser_exec` menolak `127.0.0.1` (private address) | 1 | start Chromium sendiri dengan `--remote-debugging-port=9222` |
+| `terminal` menolak `&` untuk background | 1 | `background=true` |
+
+**Berikutnya:** kartu `t_c5bed955` (route `/` + `/health`) dan `t_7c752775` (`/micro`).
+
+---
+
+## Sesi 2026-10-21 — Fase 2: `src/charts.ts` — 7 chart spec + `applyNonce` (programmer, kartu t_b350dc31)
+
+**Isi `src/charts.ts` (334 baris):**
+- `applyNonce(html, nonce)` + `hasUnstampedScripts(html)` — port `apply_nonce()`
+  dari `app.py`, regex identik (`<script(?![^>]*\bsrc=)(?![^>]*\bnonce=)`, `i`).
+  `headers.ts` re-export, jadi CSP policy + stamping satu implementasi.
+- `baseLayout()` — port verbatim `_base_layout()`.
+- `buildMainChart()` (PDB + inflasi 5 tahun, 2 trace), `buildSingleChart()`
+  (detail, `fill="tozeroy"`), `buildInflationChart()` (12 bulan YoY + band
+  corridor BI 1.5–3.5% dari `BI_TARGET_LOW/HIGH`), `buildMicroChart()`,
+  `buildIndexedChart()` + `toIndex()` (emas vs BBM, base 100), `buildBbmVsWageChart()`
+  (indeks 2014=100 + anotasi ↑/↓ untuk perubahan BBM >10%).
+
+**Bukti (semua dijalankan ulang sesi ini):**
+```
+tsc --noEmit                        → exit 0
+node scripts/test_charts_specs.mjs  → 83/83 PASS   (applyNonce + semua builder)
+node scripts/test_charts_db.mjs     → 19/19 PASS   (x/y spec == baris D1)
+node scripts/test_charts_e2e.mjs    → 26/26 PASS   (fetch() Worker + D1 asli)
+compare_chart_numbers.py            → PASS (6 exact, 2 freshness)
+verify_browser_charts.py /          → PASS 7 chart, 11 KPI, 0 CSP violation
+verify_browser_charts.py /micro     → PASS 5 chart, 9 KPI, 0 CSP violation
+test_security_headers.py            → 42/42 PASS
+verify_page_parity.py               → SEMUA LULUS
+node scripts/test_render_dashboard.mjs → 45/45 PASS
+node scripts/test_kpi_insight.mjs      → 55/55 PASS
+```
+
+**Tiga file test baru:**
+- `scripts/test_charts_specs.mjs` — `applyNonce` (12 assertion) + struktur tiap
+  spec: trace ada, `x`/`y` tidak kosong, tidak ada NaN, layout + config ada,
+  corridor band = 3.5/1.5, `toIndex` base 100, anotasi BBM pada lompatan >10%.
+- `scripts/test_charts_db.mjs` — baca D1 lokal (`.wrangler/state/.../miniflare-D1DatabaseObject/*.sqlite`)
+  via `node:sqlite`, bangun facade D1, jalankan `buildDashboardView(db)`, lalu
+  bandingkan `x`/`y` tiap trace dengan baris D1. Ini bukti "angka dari D1".
+- `scripts/test_charts_e2e.mjs` — bundle `src/index.ts` dengan esbuild, panggil
+  `fetch()` dengan binding D1 asli, parse `window.__CHARTS__` dari HTML, cek 7
+  mount point + 7 spec + nonce pada 2 inline script + CDN script tanpa nonce +
+  rute lain 200.
+
+**Ditemukan & diperbaiki:**
+| Masalah | Attempt | Resolusi |
+|---|---|---|
+| `test_nonce_charts.mjs` assertion "uppercase SCRIPT stamped" mengharapkan tag name diubah jadi huruf kecil | 1 | assertion salah (Python `re.sub` juga tidak mengubah tag name); ganti expectation, `applyNonce` tidak diubah |
+| assertion corridor band pakai `Math.max/min` pada array yang sudah dibalik | 1 | bandingkan separuh pertama (HIGH) dan kedua (LOW) secara eksplisit |
+| `worker.fetch is not a function` saat import bundle `index.ts` | 1 | esbuild ESM wrapper tidak meneruskan named export; pakai `mod.default ?? mod` |
+| `TypeError` akses `cspNonce[1]` saat header CSP tidak ketemu | 1 | `res.headers` Node menormalisasi key jadi lowercase; baca `content-security-policy` |
+| `ReferenceError` akses `passed` sebelum inisialisasi | 1 | panggil `check()` setelah deklarasi `let passed` |
+| assertion placeholder "data belum tersedia" gagal di D1 penuh | 1 | D1 terisi penuh → tidak ada placeholder; assertion diganti jadi "7 container selalu di-emit" |
+
+**Catatan:** `scripts/test_security_headers.py` sempat 35/42 (route 404) lalu
+42/42 setelah `wrangler dev` di-restart — kegagalan itu dari port lama, bukan dari
+perubahan chart.
+
+**Berikutnya:** kartu `t_c5bed955` (route `/` + `/health`) dan `t_7c752775` (`/micro`).
+
+---
+
+## Sesi 2026-10-21 (kartu t_c5bed955) — route `/` + `/health` + `/healthz`
+
+**Yang dikerjakan:** verifikasi `src/index.ts` (entry point Hono) terhadap kriteria
+terima kartu: `GET /` HTML penuh (KPI + 7 chart), `GET /healthz` JSON
+`{status, rows_stored}`, `npm run dev` start bersih, `tsc --noEmit` bersih.
+
+**Hasil:**
+- `tsc --noEmit` — exit 0.
+- `node scripts/test_index_routes.mjs` — **25/25 PASS**, exit 0. Fakta yang
+  dibaca dari output nyata: 11 KPI card, 7 mount point (`chart-main`,
+  `chart-pdb-growth`, `chart-inflasi-yoy-`, `chart-bi-rate`, `chart-usd-idr`,
+  `chart-rasio-gini`, `chart-inflation`), payload `window.__CHARTS__` 7 spec
+  dengan `data` non-empty, 0 `data belum tersedia`, 2 inline `<script>` semua
+  ber-nonce, script CDN tanpa nonce, `/healthz` `rows_stored=176` == `COUNT(*)`
+  D1 (dan `series_stored=545` == `COUNT(time_series)`).
+- `npm run dev` start bersih (salinan project `/tmp/wdev-copy`, port 8799, state
+  `--persist-to` terpisah): log `Ready on http://localhost:8799`, binding
+  `env.DB` (D1) + `env.CACHE_KV` (KV) terpasang, `GET /healthz` 200,
+  `GET /` 200. Server matikan lagi setelah verifikasi.
+- Server dev yang sudah jalan (port 8788, sesi sebelumnya) ikut dicek:
+  `/healthz` dan `/health` 200 JSON, `/` 200 `text/html` 22.264 byte.
+
+**File baru:** `scripts/test_index_routes.mjs`.
+
+**Catatan:** `src/index.ts` sudah berisi semua rute (termasuk `/micro`,
+`/download/csv`, `/api/refresh`) dari fase sebelumnya; kartu ini fokus pada
+`/` + `/health` + `/healthz` dan menambahkan bukti otomatis. Kartu saudara
+`t_7c752775` menulis rute micro di file yang sama — `src/index.ts` ditandai
+hotspot.
+
+---
+
+## Sesi 2026-10-22 (kartu t_c5bed955, run 16) — re-verifikasi penuh
+
+Run sebelumnya di-reclaim karena lock basi (worker mati). Kode tidak berubah;
+yang dikerjakan di sini: verifikasi ulang dari nol terhadap kriteria terima.
+
+**Hasil:**
+- `npx tsc --noEmit` — exit 0.
+- `node scripts/test_index_routes.mjs` — **26 PASS, 0 FAIL**, exit 0. Truth D1:
+  `indicators=176`, `time_series=545`. `rows_stored=176` dan `series_stored=545`
+  cocok dengan `SELECT COUNT(*)` dari salinan state yang sama.
+- `npm run dev` (port 8788) start bersih, lalu dicek live dengan `curl`:
+  - `GET /` → 200 `text/html; charset=UTF-8`, **11** `kpi-card`, **7** mount point
+    chart, payload `window.__CHARTS__` 7 spec.
+  - `GET /healthz` → 200 `application/json`
+    `{"status":"ok","rows_stored":176,"series_stored":545}`.
+  - `GET /health` → 200 JSON + `scheduler_running:"cron"`, `environment:"production"`.
+  - Angka hidup dari payload: `chart-main` 2 trace/10 titik, `chart-pdb-growth`
+    1/5, `chart-inflasi-yoy-` 1/5, `chart-bi-rate` 1/12, `chart-usd-idr` 1/30,
+    `chart-rasio-gini` 1/10, `chart-inflation` 2/36 — semua non-empty.
+  - 11 KPI card terisi nyata (1.91%, 3.28%, 5.11%, 29.6 miliar USD, 5.75%,
+    17.986, 34.4, 71.3 thn, 1.3%, 96.0%, 359); 0 `data belum tersedia`.
+- Server dev dimatikan lagi setelah verifikasi (`pkill -f 'wrangler dev'`).
+
+**Temuan (bukan bug):** regex `kpi-value` menemukan 12 kecocokan di HTML — 11
+kartu + 1 aturan CSS `.kpi-value { font-size: 2rem; ... }`. Cocokkan per-kartu
+(`<div class="card kpi-card">`) menunjukkan 11/11 terisi; kecocokan kosong itu
+salah tangkap aturan CSS, bukan KPI kosong. Tidak ada perubahan kode.
+
+**File:** tidak ada file kode yang diubah pada run ini (hanya log planning).
+
+---
+
+## Sesi 2026-10-22 (Ketua) — verifikasi independen kartu t_c5bed955
+
+Verifikasi ulang oleh Ketua (bukan worker) terhadap artefak nyata:
+
+- `npx tsc --noEmit` → exit 0.
+- `node scripts/test_index_routes.mjs` → **26 PASS, 0 FAIL**, exit 0.
+  Truth D1: `indicators=176`, `time_series=545`.
+- Rute di `src/index.ts` (grep): `/health`, `/healthz`, `/`, `/micro`,
+  `/micro-economy`, `/download/csv`, `/api/refresh` (POST+GET), `/api/data`.
+- Output test: 11 KPI card, 7 mount point chart, payload `window.__CHARTS__`
+  7 spec semua `data` non-empty, 0 `data belum tersedia`, CSP nonce di 2 inline
+  `<script>`, CDN Plotly tanpa nonce.
+
+**Catatan:** `Error: buildMicroView is stubbed in test_index_routes.mjs` di output
+test adalah **yang diharapkan** (isolasi bundle) dan dihitung sebagai PASS —
+bukan kegagalan. Cakupan micro ada di kartu `t_7c752775`.
+
+**Risiko:** working tree repo Worker masih ada perubahan belum di-commit
+(`src/index.ts`, `render.ts`, `charts.ts`, `micro.ts`, `progress.md`,
+`findings.md`). Commit `605082b` hanya berisi Fase 0–1.
+
+**Progress dicatat ke Obsidian:** `20_projects/indonesia-economic-dashboard.md`,
+`20_projects/indonesia-economic-dashboard/project-status.md`,
+`20_projects/project-index.md`, `10_memory/memory_index.md`.

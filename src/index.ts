@@ -1,10 +1,10 @@
 /**
  * Worker entry point (Hono).
  *
- * Fase 0–1 scope: the D1 schema, the data layer and the fetchers exist and are
- * exercised by `scripts/seed.mjs`. HTTP routes for the dashboard are fase 2–4;
- * the handlers below are the ones this fase needs — `/health`, `/healthz` and
- * `/api/refresh` — so `wrangler dev` has something real to serve.
+ * Fase 2–3 routes: `/` (dashboard makro), `/micro` + `/micro-economy`
+ * (alias), `/download/csv`, `/health`, `/healthz`, `/api/data`,
+ * `/api/refresh`. Data comes from D1 only — a page never fabricates a number;
+ * when a series is empty the page says so in words.
  */
 
 import { Hono } from "hono";
@@ -19,6 +19,13 @@ import {
   setSeriesMetadata,
 } from "./db";
 import { fetchAllIndicators, fetchAllMacro, fetchAllMicro } from "./fetchers";
+import { isSecureRequest, newNonce, securityHeaders } from "./headers";
+import { buildDashboardView, renderDashboard } from "./render";
+import { buildMicroView, renderMicro } from "./micro";
+import { csvSafe } from "./csv";
+// `applyNonce` is owned by `charts.ts` — the chart payload is what makes these
+// pages depend on inline scripts, so the stamping rule lives next to the specs.
+import { applyNonce } from "./charts";
 
 export interface Env {
   DB: D1Database;
@@ -29,23 +36,125 @@ export interface Env {
   BPS_API_KEY?: string;
 }
 
-const app = new Hono<{ Bindings: Env }>();
+const app = new Hono<{ Bindings: Env; Variables: { csp_nonce: string } }>();
 
+/**
+ * Every response goes through this: a fresh nonce, the security header set, and
+ * the nonce stamped onto every inline `<script>`. Port of the Flask
+ * `before_request` / `after_request` pair, done as Hono middleware.
+ */
+app.use("*", async (c, next) => {
+  const nonce = newNonce();
+  c.set("csp_nonce", nonce);
+  await next();
+
+  const res = c.res;
+  if (!res) return;
+  const headers = securityHeaders(nonce, isSecureRequest(c.req.raw));
+  for (const [name, value] of Object.entries(headers)) {
+    if (value !== undefined) res.headers.set(name, value);
+  }
+  // HTML bodies only: stamping a JSON or CSV body is wasted work, and it would
+  // corrupt a body that happens to contain "<script".
+  const contentType = res.headers.get("content-type") ?? "";
+  if (!contentType.includes("text/html")) return;
+
+  const html = await res.text();
+  const stamped = applyNonce(html, c.get("csp_nonce"));
+  c.res = new Response(stamped, {
+    status: res.status,
+    statusText: res.statusText,
+    headers: res.headers,
+  });
+});
+
+/**
+ * Port of `/health`. Reports the row counts a deploy check needs. The Flask
+ * version reported `scheduler_running` from APScheduler; the equivalent fact
+ * here is that the cron trigger is wired.
+ */
 app.get("/health", async (c) => {
   await initDb(c.env.DB);
-  const indicators = await countRows(c.env.DB);
-  const series = await countSeries(c.env.DB);
-  const lastUpdated = await getLastUpdated(c.env.DB);
   return c.json({
     status: "ok",
-    indicators,
-    series,
-    last_updated: lastUpdated,
+    timestamp: new Date().toISOString(),
+    scheduler_running: "cron",
+    rows_stored: await countRows(c.env.DB),
+    series_stored: await countSeries(c.env.DB),
+    last_updated: await getLastUpdated(c.env.DB),
     environment: c.env.ENVIRONMENT,
   });
 });
 
-app.get("/healthz", (c) => c.text("ok"));
+/**
+ * Port of `/healthz`. Render's default Health Check Path is /healthz, and a 404
+ * there makes the platform treat the deploy as failed — so it must answer JSON
+ * too, not just `/health`.
+ */
+app.get("/healthz", async (c) => {
+  await initDb(c.env.DB);
+  return c.json({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    rows_stored: await countRows(c.env.DB),
+    series_stored: await countSeries(c.env.DB),
+  });
+});
+
+/** Dashboard makro. Port of `dashboard()` + `templates/dashboard.html`. */
+app.get("/", async (c) => {
+  await initDb(c.env.DB);
+  const view = await buildDashboardView(c.env.DB);
+  return c.html(renderDashboard(view, c.get("csp_nonce")));
+});
+
+/** Micro economy page. Port of `micro_economy()` + `templates/micro.html`. */
+app.get("/micro", async (c) => {
+  await initDb(c.env.DB);
+  const query = {
+    daerah: c.req.query("daerah") ?? undefined,
+    province: c.req.query("province") ?? undefined,
+  };
+  const view = await buildMicroView(c.env.DB, query);
+  return c.html(renderMicro(view, c.get("csp_nonce")));
+});
+
+/** Alias — the Flask app serves both paths with the same handler. */
+app.get("/micro-economy", async (c) => {
+  await initDb(c.env.DB);
+  const query = {
+    daerah: c.req.query("daerah") ?? undefined,
+    province: c.req.query("province") ?? undefined,
+  };
+  const view = await buildMicroView(c.env.DB, query);
+  return c.html(renderMicro(view, c.get("csp_nonce")));
+});
+
+/** Port of `download_csv()` — spreadsheet-formula injection neutralised. */
+app.get("/download/csv", async (c) => {
+  await initDb(c.env.DB);
+  const data = await getAllData(c.env.DB);
+  const lines: string[] = ["Indicator,Code,Year,Value,Fetched At"];
+  for (const [code, info] of Object.entries(data)) {
+    for (const row of info.data) {
+      lines.push(
+        [
+          csvSafe(info.name),
+          csvSafe(code),
+          String(row.year),
+          String(row.value),
+          csvSafe(row.fetched_at),
+        ].join(","),
+      );
+    }
+  }
+  return new Response(lines.join("\n"), {
+    headers: {
+      "content-type": "text/csv; charset=utf-8",
+      "content-disposition": "attachment; filename=indonesia_economic_data.csv",
+    },
+  });
+});
 
 /** Force a fetch pass now. Used by the cron trigger and by manual refresh. */
 app.post("/api/refresh", async (c) => {
@@ -59,7 +168,7 @@ app.get("/api/refresh", async (c) => {
   return c.json(await refreshAll(c.env, bpsKey));
 });
 
-/** Data dump for the fase 2 renderer. */
+/** Data dump for the renderer (kept for parity with the Flask `/api/data`). */
 app.get("/api/data", async (c) => {
   await initDb(c.env.DB);
   const data = await getAllData(c.env.DB);
@@ -70,17 +179,6 @@ app.get("/api/data", async (c) => {
     micro_last_updated: await getSeriesMetadata(c.env.DB, "micro_last_updated"),
   });
 });
-
-/** Fallback — replaced by the dashboard HTML in fase 2. */
-app.get("/", (c) =>
-  c.text(
-    "inthiseconomy-worker: data layer ready.\n" +
-      "Routes this fase: /health, /healthz, /api/refresh, /api/data\n" +
-      "Dashboard HTML arrives in fase 2.",
-    200,
-    { "content-type": "text/plain; charset=utf-8" },
-  ),
-);
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {

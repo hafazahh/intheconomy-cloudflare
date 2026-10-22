@@ -3,3 +3,11 @@ node_modules/
 .vscode/
 .DS_Store
 *.log
+
+# Sisa tooling parity Python — bytecode tidak perlu masuk repo.
+__pycache__/
+*.pyc
+
+# Plan bernama dari plugin planning-with-files; plan kanonik ada di root
+# (task_plan.md, progress.md, findings.md) dan sudah ter-track.
+.planning/

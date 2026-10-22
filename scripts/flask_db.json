@@ -1,0 +1,3588 @@
+{
+ "indicators": {
+  "BN.GSR.GNFS.CD": {
+   "data": [
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.944938",
+     "name": "Trade Balance",
+     "value": 29649335679.1509,
+     "year": 2025
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.951734",
+     "name": "Trade Balance",
+     "value": 21353512597.2943,
+     "year": 2024
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.958352",
+     "name": "Trade Balance",
+     "value": 28593267733.9316,
+     "year": 2023
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.964364",
+     "name": "Trade Balance",
+     "value": 42715082770.478,
+     "year": 2022
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.970569",
+     "name": "Trade Balance",
+     "value": 29207502575.0115,
+     "year": 2021
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.975749",
+     "name": "Trade Balance",
+     "value": 18545794316.1108,
+     "year": 2020
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.980697",
+     "name": "Trade Balance",
+     "value": -4133324477.52497,
+     "year": 2019
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.986357",
+     "name": "Trade Balance",
+     "value": -6713373307.24594,
+     "year": 2018
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.992043",
+     "name": "Trade Balance",
+     "value": 11434768728.767,
+     "year": 2017
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:11.997571",
+     "name": "Trade Balance",
+     "value": 8234324959.97201,
+     "year": 2016
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.003002",
+     "name": "Trade Balance",
+     "value": 5351899012.23087,
+     "year": 2015
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.008651",
+     "name": "Trade Balance",
+     "value": -3027125054.37998,
+     "year": 2014
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.014204",
+     "name": "Trade Balance",
+     "value": -6237109751.68575,
+     "year": 2013
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.020976",
+     "name": "Trade Balance",
+     "value": -1884415529.3462,
+     "year": 2012
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.027194",
+     "name": "Trade Balance",
+     "value": 24021724758.5102,
+     "year": 2011
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.034177",
+     "name": "Trade Balance",
+     "value": 21212148895.5807,
+     "year": 2010
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.040848",
+     "name": "Trade Balance",
+     "value": 21191036277.8746,
+     "year": 2009
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.047013",
+     "name": "Trade Balance",
+     "value": 9917758527.08661,
+     "year": 2008
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.053671",
+     "name": "Trade Balance",
+     "value": 20911715981.2889,
+     "year": 2007
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.059665",
+     "name": "Trade Balance",
+     "value": 19786001791.3359,
+     "year": 2006
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.066534",
+     "name": "Trade Balance",
+     "value": 8411220328.28875,
+     "year": 2005
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.071561",
+     "name": "Trade Balance",
+     "value": 11341399488.3913,
+     "year": 2004
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.077109",
+     "name": "Trade Balance",
+     "value": 12455540664.1548,
+     "year": 2003
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.082637",
+     "name": "Trade Balance",
+     "value": 13131270332.3864,
+     "year": 2002
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.088757",
+     "name": "Trade Balance",
+     "value": 12316401091.3043,
+     "year": 2001
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.094060",
+     "name": "Trade Balance",
+     "value": 14619057986.5737,
+     "year": 2000
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.099617",
+     "name": "Trade Balance",
+     "value": 12865957536.7369,
+     "year": 1999
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.104991",
+     "name": "Trade Balance",
+     "value": 10819614426.835,
+     "year": 1998
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.111150",
+     "name": "Trade Balance",
+     "value": 409000000.0,
+     "year": 1997
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.116967",
+     "name": "Trade Balance",
+     "value": -2592000000.0,
+     "year": 1996
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.123936",
+     "name": "Trade Balance",
+     "value": -1538000000.0,
+     "year": 1995
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.130238",
+     "name": "Trade Balance",
+     "value": 1282000000.0,
+     "year": 1994
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.136668",
+     "name": "Trade Balance",
+     "value": 2344000000.0,
+     "year": 1993
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.142319",
+     "name": "Trade Balance",
+     "value": 2313000000.0,
+     "year": 1992
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.147315",
+     "name": "Trade Balance",
+     "value": 1059000000.0,
+     "year": 1991
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.153087",
+     "name": "Trade Balance",
+     "value": 1784000000.0,
+     "year": 1990
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.158587",
+     "name": "Trade Balance",
+     "value": 3100000000.0,
+     "year": 1989
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.166029",
+     "name": "Trade Balance",
+     "value": 2441000000.0,
+     "year": 1988
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.173130",
+     "name": "Trade Balance",
+     "value": 1299000000.0,
+     "year": 1987
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.179238",
+     "name": "Trade Balance",
+     "value": -954000000.0,
+     "year": 1986
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.187445",
+     "name": "Trade Balance",
+     "value": 1531000000.0,
+     "year": 1985
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.193989",
+     "name": "Trade Balance",
+     "value": 2038000000.0,
+     "year": 1984
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.199577",
+     "name": "Trade Balance",
+     "value": -2802000000.0,
+     "year": 1983
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.204928",
+     "name": "Trade Balance",
+     "value": -2465000000.0,
+     "year": 1982
+    },
+    {
+     "code": "BN.GSR.GNFS.CD",
+     "fetched_at": "2026-10-10T17:14:12.210852",
+     "name": "Trade Balance",
+     "value": 2257000000.0,
+     "year": 1981
+    }
+   ],
+   "latest": {
+    "code": "BN.GSR.GNFS.CD",
+    "fetched_at": "2026-10-10T17:14:11.944938",
+    "name": "Trade Balance",
+    "value": 29649335679.1509,
+    "year": 2025
+   },
+   "name": "Trade Balance"
+  },
+  "FP.CPI.TOTL.ZG": {
+   "data": [
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.417684",
+     "name": "Inflasi",
+     "value": 1.91333443295079,
+     "year": 2025
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.426424",
+     "name": "Inflasi",
+     "value": 2.18151273615188,
+     "year": 2024
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.433835",
+     "name": "Inflasi",
+     "value": 3.66938654859761,
+     "year": 2023
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.439846",
+     "name": "Inflasi",
+     "value": 4.20946463714784,
+     "year": 2022
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.445954",
+     "name": "Inflasi",
+     "value": 1.56007882983334,
+     "year": 2021
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.452016",
+     "name": "Inflasi",
+     "value": 1.91983527270792,
+     "year": 2020
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.457804",
+     "name": "Inflasi",
+     "value": 3.0305846094166,
+     "year": 2019
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.464427",
+     "name": "Inflasi",
+     "value": 3.19834755924996,
+     "year": 2018
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.470079",
+     "name": "Inflasi",
+     "value": 3.80879857691948,
+     "year": 2017
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.476010",
+     "name": "Inflasi",
+     "value": 3.52580452815451,
+     "year": 2016
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.481999",
+     "name": "Inflasi",
+     "value": 6.36312061196646,
+     "year": 2015
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.487012",
+     "name": "Inflasi",
+     "value": 6.39492882396559,
+     "year": 2014
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.494824",
+     "name": "Inflasi",
+     "value": 6.41249457900391,
+     "year": 2013
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.501799",
+     "name": "Inflasi",
+     "value": 4.2795142691943,
+     "year": 2012
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.507828",
+     "name": "Inflasi",
+     "value": 5.35604849112582,
+     "year": 2011
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.513877",
+     "name": "Inflasi",
+     "value": 5.13420639015885,
+     "year": 2010
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.518849",
+     "name": "Inflasi",
+     "value": 4.38641311792073,
+     "year": 2009
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.524265",
+     "name": "Inflasi",
+     "value": 10.2266663272482,
+     "year": 2008
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.530057",
+     "name": "Inflasi",
+     "value": 6.40656087966004,
+     "year": 2007
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.536210",
+     "name": "Inflasi",
+     "value": 13.1086709853459,
+     "year": 2006
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.541907",
+     "name": "Inflasi",
+     "value": 10.4532001873347,
+     "year": 2005
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.547381",
+     "name": "Inflasi",
+     "value": 6.06406189133647,
+     "year": 2004
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.552663",
+     "name": "Inflasi",
+     "value": 6.75731256333564,
+     "year": 2003
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.557482",
+     "name": "Inflasi",
+     "value": 11.9001200338413,
+     "year": 2002
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.562683",
+     "name": "Inflasi",
+     "value": 11.5001160550887,
+     "year": 2001
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.569006",
+     "name": "Inflasi",
+     "value": 3.68862037056681,
+     "year": 2000
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.575821",
+     "name": "Inflasi",
+     "value": 20.4778324428892,
+     "year": 1999
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.582416",
+     "name": "Inflasi",
+     "value": 58.4510413515525,
+     "year": 1998
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.587247",
+     "name": "Inflasi",
+     "value": 6.22615154887213,
+     "year": 1997
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.592534",
+     "name": "Inflasi",
+     "value": 7.97328096513345,
+     "year": 1996
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.598349",
+     "name": "Inflasi",
+     "value": 9.42030300572995,
+     "year": 1995
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.603999",
+     "name": "Inflasi",
+     "value": 8.53199829189143,
+     "year": 1994
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.610202",
+     "name": "Inflasi",
+     "value": 9.6719108926401,
+     "year": 1993
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.617517",
+     "name": "Inflasi",
+     "value": 7.52351006242677,
+     "year": 1992
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.623795",
+     "name": "Inflasi",
+     "value": 9.41906784347004,
+     "year": 1991
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.630817",
+     "name": "Inflasi",
+     "value": 7.81919756505634,
+     "year": 1990
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.637115",
+     "name": "Inflasi",
+     "value": 6.41554079916363,
+     "year": 1989
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.643807",
+     "name": "Inflasi",
+     "value": 8.04535671530907,
+     "year": 1988
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.649688",
+     "name": "Inflasi",
+     "value": 9.27865406602839,
+     "year": 1987
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.655043",
+     "name": "Inflasi",
+     "value": 5.82266576732484,
+     "year": 1986
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.659624",
+     "name": "Inflasi",
+     "value": 4.72453518543397,
+     "year": 1985
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.665035",
+     "name": "Inflasi",
+     "value": 10.4550392231411,
+     "year": 1984
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.671309",
+     "name": "Inflasi",
+     "value": 11.7997382076651,
+     "year": 1983
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.677403",
+     "name": "Inflasi",
+     "value": 9.44542534921143,
+     "year": 1982
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.683682",
+     "name": "Inflasi",
+     "value": 12.2659075874853,
+     "year": 1981
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.690565",
+     "name": "Inflasi",
+     "value": 18.0354221253129,
+     "year": 1980
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.696500",
+     "name": "Inflasi",
+     "value": 16.2327695334308,
+     "year": 1979
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.702728",
+     "name": "Inflasi",
+     "value": 8.11259425677377,
+     "year": 1978
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.708912",
+     "name": "Inflasi",
+     "value": 11.0520846464477,
+     "year": 1977
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.715771",
+     "name": "Inflasi",
+     "value": 19.8286499927534,
+     "year": 1976
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.725084",
+     "name": "Inflasi",
+     "value": 19.1656916610533,
+     "year": 1975
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.733237",
+     "name": "Inflasi",
+     "value": 40.4918116006949,
+     "year": 1974
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.741760",
+     "name": "Inflasi",
+     "value": 31.0418824339181,
+     "year": 1973
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.747397",
+     "name": "Inflasi",
+     "value": 6.52174091852603,
+     "year": 1972
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.752968",
+     "name": "Inflasi",
+     "value": 4.23374587741606,
+     "year": 1971
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.758614",
+     "name": "Inflasi",
+     "value": 12.399468513041,
+     "year": 1970
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.764907",
+     "name": "Inflasi",
+     "value": 15.4798773314404,
+     "year": 1969
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.771584",
+     "name": "Inflasi",
+     "value": 128.843042071197,
+     "year": 1968
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.779063",
+     "name": "Inflasi",
+     "value": 105.999999999999,
+     "year": 1967
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.785944",
+     "name": "Inflasi",
+     "value": 1136.25411220769,
+     "year": 1966
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.794672",
+     "name": "Inflasi",
+     "value": 306.763110307414,
+     "year": 1965
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.801347",
+     "name": "Inflasi",
+     "value": 108.994708994709,
+     "year": 1964
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.809000",
+     "name": "Inflasi",
+     "value": 145.910780669144,
+     "year": 1963
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.815799",
+     "name": "Inflasi",
+     "value": 131.397849462365,
+     "year": 1962
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.821497",
+     "name": "Inflasi",
+     "value": 13.6919315403424,
+     "year": 1961
+    },
+    {
+     "code": "FP.CPI.TOTL.ZG",
+     "fetched_at": "2026-10-10T17:14:11.828322",
+     "name": "Inflasi",
+     "value": 39.5904436860067,
+     "year": 1960
+    }
+   ],
+   "latest": {
+    "code": "FP.CPI.TOTL.ZG",
+    "fetched_at": "2026-10-10T17:14:11.417684",
+    "name": "Inflasi",
+    "value": 1.91333443295079,
+    "year": 2025
+   },
+   "name": "Inflasi"
+  },
+  "NY.GDP.MKTP.KD.ZG": {
+   "data": [
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.869392",
+     "name": "PDB Growth",
+     "value": 5.10808904438025,
+     "year": 2025
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.876694",
+     "name": "PDB Growth",
+     "value": 5.03257477088519,
+     "year": 2024
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.882565",
+     "name": "PDB Growth",
+     "value": 5.04883117855516,
+     "year": 2023
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.888578",
+     "name": "PDB Growth",
+     "value": 5.30719722664799,
+     "year": 2022
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.894678",
+     "name": "PDB Growth",
+     "value": 3.70288562827751,
+     "year": 2021
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.900910",
+     "name": "PDB Growth",
+     "value": -2.06551182934165,
+     "year": 2020
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.908001",
+     "name": "PDB Growth",
+     "value": 5.01928768046282,
+     "year": 2019
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.913877",
+     "name": "PDB Growth",
+     "value": 5.17429153955024,
+     "year": 2018
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.919012",
+     "name": "PDB Growth",
+     "value": 5.06978590134916,
+     "year": 2017
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.925026",
+     "name": "PDB Growth",
+     "value": 5.03306918280177,
+     "year": 2016
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.932302",
+     "name": "PDB Growth",
+     "value": 4.87632230022123,
+     "year": 2015
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.938369",
+     "name": "PDB Growth",
+     "value": 5.006668425755,
+     "year": 2014
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.944684",
+     "name": "PDB Growth",
+     "value": 5.5572636889101,
+     "year": 2013
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.951841",
+     "name": "PDB Growth",
+     "value": 6.03005065305615,
+     "year": 2012
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.958024",
+     "name": "PDB Growth",
+     "value": 6.16978420771008,
+     "year": 2011
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.964787",
+     "name": "PDB Growth",
+     "value": 6.22385418062366,
+     "year": 2010
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.971741",
+     "name": "PDB Growth",
+     "value": 4.62887118256153,
+     "year": 2009
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.977166",
+     "name": "PDB Growth",
+     "value": 6.01370360009123,
+     "year": 2008
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.982760",
+     "name": "PDB Growth",
+     "value": 6.34502222667214,
+     "year": 2007
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.988159",
+     "name": "PDB Growth",
+     "value": 5.50095178520348,
+     "year": 2006
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.993265",
+     "name": "PDB Growth",
+     "value": 5.69257130383384,
+     "year": 2005
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:10.998879",
+     "name": "PDB Growth",
+     "value": 5.03087394501685,
+     "year": 2004
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.005464",
+     "name": "PDB Growth",
+     "value": 4.78036912167654,
+     "year": 2003
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.012256",
+     "name": "PDB Growth",
+     "value": 4.49947539085764,
+     "year": 2002
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.019629",
+     "name": "PDB Growth",
+     "value": 3.64346644721492,
+     "year": 2001
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.025864",
+     "name": "PDB Growth",
+     "value": 4.9200677470169,
+     "year": 2000
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.031509",
+     "name": "PDB Growth",
+     "value": 0.79112608199847,
+     "year": 1999
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.037985",
+     "name": "PDB Growth",
+     "value": -13.1267254923818,
+     "year": 1998
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.043196",
+     "name": "PDB Growth",
+     "value": 4.69987885390397,
+     "year": 1997
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.048576",
+     "name": "PDB Growth",
+     "value": 7.81818707670867,
+     "year": 1996
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.053866",
+     "name": "PDB Growth",
+     "value": 8.22000739903493,
+     "year": 1995
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.059181",
+     "name": "PDB Growth",
+     "value": 7.53997109551439,
+     "year": 1994
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.063786",
+     "name": "PDB Growth",
+     "value": 6.49640812045304,
+     "year": 1993
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.069703",
+     "name": "PDB Growth",
+     "value": 6.49750651682714,
+     "year": 1992
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.075448",
+     "name": "PDB Growth",
+     "value": 6.91198283591309,
+     "year": 1991
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.081477",
+     "name": "PDB Growth",
+     "value": 7.24213163856464,
+     "year": 1990
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.087336",
+     "name": "PDB Growth",
+     "value": 7.45658692516847,
+     "year": 1989
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.096835",
+     "name": "PDB Growth",
+     "value": 5.7804984881177,
+     "year": 1988
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.103733",
+     "name": "PDB Growth",
+     "value": 4.92592736496611,
+     "year": 1987
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.109362",
+     "name": "PDB Growth",
+     "value": 5.87504510359864,
+     "year": 1986
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.115501",
+     "name": "PDB Growth",
+     "value": 2.46214356422551,
+     "year": 1985
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.121047",
+     "name": "PDB Growth",
+     "value": 6.97552780884124,
+     "year": 1984
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.127384",
+     "name": "PDB Growth",
+     "value": 4.1929673681999,
+     "year": 1983
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.133787",
+     "name": "PDB Growth",
+     "value": 2.24644534036375,
+     "year": 1982
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.140926",
+     "name": "PDB Growth",
+     "value": 7.92715682412874,
+     "year": 1981
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.147250",
+     "name": "PDB Growth",
+     "value": 9.88007752166418,
+     "year": 1980
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.153105",
+     "name": "PDB Growth",
+     "value": 7.32430948559606,
+     "year": 1979
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.158358",
+     "name": "PDB Growth",
+     "value": 6.76706985763171,
+     "year": 1978
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.163957",
+     "name": "PDB Growth",
+     "value": 8.76132560106353,
+     "year": 1977
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.169969",
+     "name": "PDB Growth",
+     "value": 6.88656497352524,
+     "year": 1976
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.175883",
+     "name": "PDB Growth",
+     "value": 4.97730086669512,
+     "year": 1975
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.181899",
+     "name": "PDB Growth",
+     "value": 7.6346729055067,
+     "year": 1974
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.188997",
+     "name": "PDB Growth",
+     "value": 8.1039755351653,
+     "year": 1973
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.195967",
+     "name": "PDB Growth",
+     "value": 7.03764320785962,
+     "year": 1972
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.202781",
+     "name": "PDB Growth",
+     "value": 7.02399719740848,
+     "year": 1971
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.209278",
+     "name": "PDB Growth",
+     "value": 7.55463451394223,
+     "year": 1970
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.216937",
+     "name": "PDB Growth",
+     "value": 6.82229824913614,
+     "year": 1969
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.223621",
+     "name": "PDB Growth",
+     "value": 10.9151785714295,
+     "year": 1968
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.229721",
+     "name": "PDB Growth",
+     "value": 1.38040280607036,
+     "year": 1967
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.235649",
+     "name": "PDB Growth",
+     "value": 2.79134682484525,
+     "year": 1966
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.242679",
+     "name": "PDB Growth",
+     "value": 1.08158946626055,
+     "year": 1965
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.249447",
+     "name": "PDB Growth",
+     "value": 3.52969814993797,
+     "year": 1964
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.255507",
+     "name": "PDB Growth",
+     "value": -2.23702998571657,
+     "year": 1963
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.263753",
+     "name": "PDB Growth",
+     "value": 1.84197770236842,
+     "year": 1962
+    },
+    {
+     "code": "NY.GDP.MKTP.KD.ZG",
+     "fetched_at": "2026-10-10T17:14:11.270445",
+     "name": "PDB Growth",
+     "value": 5.74064582266813,
+     "year": 1961
+    }
+   ],
+   "latest": {
+    "code": "NY.GDP.MKTP.KD.ZG",
+    "fetched_at": "2026-10-10T17:14:10.869392",
+    "name": "PDB Growth",
+    "value": 5.10808904438025,
+    "year": 2025
+   },
+   "name": "PDB Growth"
+  }
+ },
+ "metadata": {
+  "backfill_last_run": "2026-10-21T09:20:02.587620",
+  "bbm_last_updated": "2026-10-13",
+  "gold_last_updated": "2026-10-13",
+  "ikk_last_updated": "2026-09-01",
+  "last_updated": "2026-10-10 17:14 UTC",
+  "macro_last_updated": "2026-10-13 08:47 UTC",
+  "micro_last_updated": "2026-10-13 07:01 UTC"
+ },
+ "series": {
+  "bbm_dexlite__aceh_sumut": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.434354",
+    "value": 10000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.443995",
+    "value": 10000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.451908",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.459381",
+    "value": 23700.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.466813",
+    "value": 23700.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.475436",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.484649",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.493431",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.456435",
+    "value": 24200.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.503911",
+    "value": 24200.0
+   }
+  ],
+  "bbm_dexlite__indonesia_timur": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:02.225701",
+    "value": 10000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:02.235340",
+    "value": 10000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:02.244435",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:02.252802",
+    "value": 23700.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:02.261108",
+    "value": 23700.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.271125",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.281451",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:02.289361",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:27.269973",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:02.296578",
+    "value": 23700.0
+   }
+  ],
+  "bbm_dexlite__jawa": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.080385",
+    "value": 10000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.086781",
+    "value": 10000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.092713",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.100408",
+    "value": 23700.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.108465",
+    "value": 23700.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.115743",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.122907",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.129355",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.018784",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.137796",
+    "value": 23700.0
+   }
+  ],
+  "bbm_dexlite__sumbar_riau": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.820635",
+    "value": 10000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.827842",
+    "value": 10000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.835782",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.843169",
+    "value": 23700.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.851926",
+    "value": 23700.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.860217",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.868949",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.879466",
+    "value": 23700.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.868320",
+    "value": 24200.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.888367",
+    "value": 24200.0
+   }
+  ],
+  "bbm_pertalite__aceh_sumut": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.216787",
+    "value": 7500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.223264",
+    "value": 8000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.230424",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.238996",
+    "value": 10000.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.246033",
+    "value": 10000.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.253296",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.260124",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.270090",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.191916",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.283015",
+    "value": 10000.0
+   }
+  ],
+  "bbm_pertalite__indonesia_timur": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.986130",
+    "value": 7500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.993753",
+    "value": 8000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:02.003530",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:02.012953",
+    "value": 10000.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:02.021110",
+    "value": 10000.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.031399",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.041163",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:02.050773",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:27.029282",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:02.058241",
+    "value": 10000.0
+   }
+  ],
+  "bbm_pertalite__jawa": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:00.879708",
+    "value": 7500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:00.887110",
+    "value": 8000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:00.895314",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:00.902538",
+    "value": 10000.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:00.909373",
+    "value": 10000.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:00.916627",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:00.923593",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:00.931195",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:25.754535",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:00.938305",
+    "value": 10000.0
+   }
+  ],
+  "bbm_pertalite__sumbar_riau": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.584815",
+    "value": 7500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.593712",
+    "value": 8000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.601853",
+    "value": 10000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.610215",
+    "value": 10000.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.617251",
+    "value": 10000.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.624643",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.632557",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.641370",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.626109",
+    "value": 10000.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.650131",
+    "value": 10000.0
+   }
+  ],
+  "bbm_pertamax__aceh_sumut": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.294064",
+    "value": 12500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.301701",
+    "value": 12500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.310194",
+    "value": 12500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.318254",
+    "value": 14950.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.326601",
+    "value": 14950.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.334355",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.342395",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.352144",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.281342",
+    "value": 16300.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.359494",
+    "value": 16300.0
+   }
+  ],
+  "bbm_pertamax__indonesia_timur": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:02.065978",
+    "value": 12500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:02.074240",
+    "value": 12500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:02.082516",
+    "value": 12500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:02.090093",
+    "value": 14950.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:02.096912",
+    "value": 14950.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.106997",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.116560",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:02.123851",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:27.106912",
+    "value": 14950.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:02.132016",
+    "value": 14950.0
+   }
+  ],
+  "bbm_pertamax__jawa": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:00.945355",
+    "value": 12500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:00.952650",
+    "value": 12500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:00.959707",
+    "value": 12500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:00.966602",
+    "value": 14950.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:00.973855",
+    "value": 14950.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:00.980855",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:00.987223",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:00.993618",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:25.835462",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.000238",
+    "value": 15950.0
+   }
+  ],
+  "bbm_pertamax__sumbar_riau": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.657359",
+    "value": 12500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.665439",
+    "value": 12500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.672285",
+    "value": 12500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.683587",
+    "value": 14950.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.691454",
+    "value": 14950.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.702069",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.710952",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.719720",
+    "value": 15950.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.708357",
+    "value": 16650.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.728691",
+    "value": 16650.0
+   }
+  ],
+  "bbm_pertamax_turbo__aceh_sumut": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.367151",
+    "value": 15000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.374708",
+    "value": 15000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.381788",
+    "value": 15000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.389617",
+    "value": 18550.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.396556",
+    "value": 18550.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.403114",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.410413",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.418206",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.364528",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.425555",
+    "value": 19600.0
+   }
+  ],
+  "bbm_pertamax_turbo__indonesia_timur": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:02.140848",
+    "value": 15000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:02.149357",
+    "value": 15000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:02.158348",
+    "value": 15000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:02.166259",
+    "value": 18550.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:02.174471",
+    "value": 18550.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.185007",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.193448",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:02.202209",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:27.189919",
+    "value": 18550.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:02.216324",
+    "value": 18550.0
+   }
+  ],
+  "bbm_pertamax_turbo__jawa": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.007621",
+    "value": 15000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.016122",
+    "value": 15000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.024551",
+    "value": 15000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.033089",
+    "value": 18550.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.041682",
+    "value": 18550.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.049396",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.055808",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.064708",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:25.924976",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.073011",
+    "value": 19600.0
+   }
+  ],
+  "bbm_pertamax_turbo__sumbar_riau": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.739704",
+    "value": 15000.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.749666",
+    "value": 15000.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.756954",
+    "value": 15000.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.764676",
+    "value": 18550.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.773434",
+    "value": 18550.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.784786",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.793541",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.803159",
+    "value": 19600.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.787628",
+    "value": 20450.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.813535",
+    "value": 20450.0
+   }
+  ],
+  "bbm_solar__aceh_sumut": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.514215",
+    "value": 6500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.523800",
+    "value": 6500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.532224",
+    "value": 6500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.540371",
+    "value": 6800.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.548608",
+    "value": 6800.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.555441",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.561731",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.568959",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.542645",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.576345",
+    "value": 6800.0
+   }
+  ],
+  "bbm_solar__indonesia_timur": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:02.306108",
+    "value": 6500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:02.314405",
+    "value": 6500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:02.322170",
+    "value": 6500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:02.330311",
+    "value": 6800.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:02.340408",
+    "value": 6800.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.348833",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.358754",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:02.367189",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:27.354002",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:02.375799",
+    "value": 6800.0
+   }
+  ],
+  "bbm_solar__jawa": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.146599",
+    "value": 6500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.154292",
+    "value": 6500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.161813",
+    "value": 6500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.170201",
+    "value": 6800.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.177521",
+    "value": 6800.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.184596",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.192240",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.200077",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.100891",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.208736",
+    "value": 6800.0
+   }
+  ],
+  "bbm_solar__sumbar_riau": [
+   {
+    "date": "2020-01-01",
+    "fetched_at": "2026-10-21T09:20:01.896507",
+    "value": 6500.0
+   },
+   {
+    "date": "2021-01-01",
+    "fetched_at": "2026-10-21T09:20:01.907013",
+    "value": 6500.0
+   },
+   {
+    "date": "2022-01-01",
+    "fetched_at": "2026-10-21T09:20:01.915996",
+    "value": 6500.0
+   },
+   {
+    "date": "2023-01-01",
+    "fetched_at": "2026-10-21T09:20:01.925651",
+    "value": 6800.0
+   },
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:01.936858",
+    "value": 6800.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:01.946909",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:01.957407",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:01.969156",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T11:24:26.953519",
+    "value": 6800.0
+   },
+   {
+    "date": "2026-10-21",
+    "fetched_at": "2026-10-21T09:20:01.977732",
+    "value": 6800.0
+   }
+  ],
+  "bi_rate": [
+   {
+    "date": "2026-01-21",
+    "fetched_at": "2026-10-13T08:47:22.133409",
+    "value": 4.75
+   },
+   {
+    "date": "2026-02-19",
+    "fetched_at": "2026-10-13T08:47:22.125457",
+    "value": 4.75
+   },
+   {
+    "date": "2026-03-17",
+    "fetched_at": "2026-10-13T08:47:22.117531",
+    "value": 4.75
+   },
+   {
+    "date": "2026-04-22",
+    "fetched_at": "2026-10-13T08:47:22.109687",
+    "value": 4.75
+   },
+   {
+    "date": "2026-05-20",
+    "fetched_at": "2026-10-13T08:47:22.101647",
+    "value": 5.25
+   },
+   {
+    "date": "2026-06-09",
+    "fetched_at": "2026-10-13T08:47:22.093315",
+    "value": 5.5
+   },
+   {
+    "date": "2026-06-18",
+    "fetched_at": "2026-10-13T08:47:22.085463",
+    "value": 5.75
+   },
+   {
+    "date": "2026-07-22",
+    "fetched_at": "2026-10-13T08:47:22.077441",
+    "value": 5.75
+   },
+   {
+    "date": "2026-08-19",
+    "fetched_at": "2026-10-13T08:47:22.069556",
+    "value": 5.75
+   },
+   {
+    "date": "2026-09-23",
+    "fetched_at": "2026-10-13T08:47:22.059460",
+    "value": 5.75
+   }
+  ],
+  "edu_exp": [
+   {
+    "date": "1972-12-31",
+    "fetched_at": "2026-10-13T08:47:23.813469",
+    "value": 2.78820991516113
+   },
+   {
+    "date": "1989-12-31",
+    "fetched_at": "2026-10-13T08:47:23.804053",
+    "value": 0.871410012245178
+   },
+   {
+    "date": "1994-12-31",
+    "fetched_at": "2026-10-13T08:47:23.794886",
+    "value": 0.998549997806549
+   },
+   {
+    "date": "1995-12-31",
+    "fetched_at": "2026-10-13T08:47:23.784414",
+    "value": 1.00434994697571
+   },
+   {
+    "date": "1996-12-31",
+    "fetched_at": "2026-10-13T08:47:23.775034",
+    "value": 1.07854998111725
+   },
+   {
+    "date": "1997-12-31",
+    "fetched_at": "2026-10-13T08:47:23.765830",
+    "value": 1.07208001613617
+   },
+   {
+    "date": "2001-12-31",
+    "fetched_at": "2026-10-13T08:47:23.757819",
+    "value": 2.46003007888794
+   },
+   {
+    "date": "2002-12-31",
+    "fetched_at": "2026-10-13T08:47:23.750131",
+    "value": 2.64568996429443
+   },
+   {
+    "date": "2003-12-31",
+    "fetched_at": "2026-10-13T08:47:23.741042",
+    "value": 3.21799993515015
+   },
+   {
+    "date": "2004-12-31",
+    "fetched_at": "2026-10-13T08:47:23.732244",
+    "value": 2.74846005439758
+   },
+   {
+    "date": "2005-12-31",
+    "fetched_at": "2026-10-13T08:47:23.723342",
+    "value": 2.87281990051269
+   },
+   {
+    "date": "2007-12-31",
+    "fetched_at": "2026-10-13T08:47:23.714650",
+    "value": 3.04426002502441
+   },
+   {
+    "date": "2008-12-31",
+    "fetched_at": "2026-10-13T08:47:23.705750",
+    "value": 2.90190005302429
+   },
+   {
+    "date": "2009-12-31",
+    "fetched_at": "2026-10-13T08:47:23.697239",
+    "value": 3.52513003349304
+   },
+   {
+    "date": "2010-12-31",
+    "fetched_at": "2026-10-13T08:47:23.689197",
+    "value": 2.81227993965149
+   },
+   {
+    "date": "2011-12-31",
+    "fetched_at": "2026-10-13T08:47:23.680942",
+    "value": 3.18944001197815
+   },
+   {
+    "date": "2012-12-31",
+    "fetched_at": "2026-10-13T08:47:23.672252",
+    "value": 3.40748000144958
+   },
+   {
+    "date": "2013-12-31",
+    "fetched_at": "2026-10-13T08:47:23.664894",
+    "value": 3.35904002189636
+   },
+   {
+    "date": "2014-12-31",
+    "fetched_at": "2026-10-13T08:47:23.657006",
+    "value": 3.28800988197327
+   },
+   {
+    "date": "2015-12-31",
+    "fetched_at": "2026-10-13T08:47:23.649005",
+    "value": 3.58361005783081
+   },
+   {
+    "date": "2016-12-31",
+    "fetched_at": "2026-10-13T08:47:23.641373",
+    "value": 1.21023452496964
+   },
+   {
+    "date": "2017-12-31",
+    "fetched_at": "2026-10-13T08:47:23.633108",
+    "value": 1.05324382490056
+   },
+   {
+    "date": "2018-12-31",
+    "fetched_at": "2026-10-13T08:47:23.623970",
+    "value": 0.994436460846179
+   },
+   {
+    "date": "2019-12-31",
+    "fetched_at": "2026-10-13T08:47:23.615164",
+    "value": 0.964399077622927
+   },
+   {
+    "date": "2020-12-31",
+    "fetched_at": "2026-10-13T08:47:23.606465",
+    "value": 1.01593221347809
+   },
+   {
+    "date": "2021-12-31",
+    "fetched_at": "2026-10-13T08:47:23.598209",
+    "value": 1.03221750658374
+   },
+   {
+    "date": "2022-12-31",
+    "fetched_at": "2026-10-13T08:47:23.589521",
+    "value": 0.863943349575907
+   },
+   {
+    "date": "2023-12-31",
+    "fetched_at": "2026-10-13T08:47:23.581415",
+    "value": 1.27517088245674
+   }
+  ],
+  "gini": [
+   {
+    "date": "1984-12-31",
+    "fetched_at": "2026-10-13T08:47:22.776249",
+    "value": 32.3
+   },
+   {
+    "date": "1987-12-31",
+    "fetched_at": "2026-10-13T08:47:22.767681",
+    "value": 30.4
+   },
+   {
+    "date": "1990-12-31",
+    "fetched_at": "2026-10-13T08:47:22.759293",
+    "value": 31.1
+   },
+   {
+    "date": "1993-12-31",
+    "fetched_at": "2026-10-13T08:47:22.750686",
+    "value": 31.8
+   },
+   {
+    "date": "1996-12-31",
+    "fetched_at": "2026-10-13T08:47:22.742326",
+    "value": 34.2
+   },
+   {
+    "date": "1998-12-31",
+    "fetched_at": "2026-10-13T08:47:22.734445",
+    "value": 30.9
+   },
+   {
+    "date": "1999-12-31",
+    "fetched_at": "2026-10-13T08:47:22.726077",
+    "value": 30.8
+   },
+   {
+    "date": "2000-12-31",
+    "fetched_at": "2026-10-13T08:47:22.717590",
+    "value": 30.3
+   },
+   {
+    "date": "2001-12-31",
+    "fetched_at": "2026-10-13T08:47:22.709319",
+    "value": 31.2
+   },
+   {
+    "date": "2002-12-31",
+    "fetched_at": "2026-10-13T08:47:22.701211",
+    "value": 30.2
+   },
+   {
+    "date": "2003-12-31",
+    "fetched_at": "2026-10-13T08:47:22.692848",
+    "value": 29.3
+   },
+   {
+    "date": "2004-12-31",
+    "fetched_at": "2026-10-13T08:47:22.684860",
+    "value": 30.4
+   },
+   {
+    "date": "2005-12-31",
+    "fetched_at": "2026-10-13T08:47:22.676941",
+    "value": 29.9
+   },
+   {
+    "date": "2006-12-31",
+    "fetched_at": "2026-10-13T08:47:22.669315",
+    "value": 31.5
+   },
+   {
+    "date": "2007-12-31",
+    "fetched_at": "2026-10-13T08:47:22.661556",
+    "value": 33.2
+   },
+   {
+    "date": "2008-12-31",
+    "fetched_at": "2026-10-13T08:47:22.653844",
+    "value": 32.6
+   },
+   {
+    "date": "2009-12-31",
+    "fetched_at": "2026-10-13T08:47:22.645924",
+    "value": 33.4
+   },
+   {
+    "date": "2010-12-31",
+    "fetched_at": "2026-10-13T08:47:22.638364",
+    "value": 34.6
+   },
+   {
+    "date": "2011-12-31",
+    "fetched_at": "2026-10-13T08:47:22.630057",
+    "value": 37.9
+   },
+   {
+    "date": "2012-12-31",
+    "fetched_at": "2026-10-13T08:47:22.621779",
+    "value": 37.1
+   },
+   {
+    "date": "2013-12-31",
+    "fetched_at": "2026-10-13T08:47:22.612966",
+    "value": 38.9
+   },
+   {
+    "date": "2014-12-31",
+    "fetched_at": "2026-10-13T08:47:22.605337",
+    "value": 38.8
+   },
+   {
+    "date": "2015-12-31",
+    "fetched_at": "2026-10-13T08:47:22.597626",
+    "value": 38.2
+   },
+   {
+    "date": "2016-12-31",
+    "fetched_at": "2026-10-13T08:47:22.589443",
+    "value": 36.9
+   },
+   {
+    "date": "2017-12-31",
+    "fetched_at": "2026-10-13T08:47:22.581501",
+    "value": 36.4
+   },
+   {
+    "date": "2018-12-31",
+    "fetched_at": "2026-10-13T08:47:22.573568",
+    "value": 36.3
+   },
+   {
+    "date": "2019-12-31",
+    "fetched_at": "2026-10-13T08:47:22.565702",
+    "value": 35.4
+   },
+   {
+    "date": "2020-12-31",
+    "fetched_at": "2026-10-13T08:47:22.557193",
+    "value": 35.3
+   },
+   {
+    "date": "2021-12-31",
+    "fetched_at": "2026-10-13T08:47:22.548211",
+    "value": 35.5
+   },
+   {
+    "date": "2022-12-31",
+    "fetched_at": "2026-10-13T08:47:22.540530",
+    "value": 35.5
+   },
+   {
+    "date": "2023-12-31",
+    "fetched_at": "2026-10-13T08:47:22.532370",
+    "value": 36.1
+   },
+   {
+    "date": "2024-12-31",
+    "fetched_at": "2026-10-13T08:47:22.524423",
+    "value": 34.9
+   },
+   {
+    "date": "2025-12-31",
+    "fetched_at": "2026-10-13T08:47:22.516308",
+    "value": 34.4
+   }
+  ],
+  "gold_gram": [
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:00.066364",
+    "value": 1129000.0
+   },
+   {
+    "date": "2024-02-01",
+    "fetched_at": "2026-10-21T09:20:00.075375",
+    "value": 1143000.0
+   },
+   {
+    "date": "2024-03-01",
+    "fetched_at": "2026-10-21T09:20:00.082640",
+    "value": 1142000.0
+   },
+   {
+    "date": "2024-04-01",
+    "fetched_at": "2026-10-21T09:20:00.091291",
+    "value": 1254000.0
+   },
+   {
+    "date": "2024-05-01",
+    "fetched_at": "2026-10-21T09:20:00.098791",
+    "value": 1310000.0
+   },
+   {
+    "date": "2024-06-01",
+    "fetched_at": "2026-10-21T09:20:00.106127",
+    "value": 1336000.0
+   },
+   {
+    "date": "2024-07-01",
+    "fetched_at": "2026-10-21T09:20:00.113223",
+    "value": 1363000.0
+   },
+   {
+    "date": "2024-11-01",
+    "fetched_at": "2026-10-21T09:20:00.120798",
+    "value": 1547000.0
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:00.127469",
+    "value": 1608000.0
+   },
+   {
+    "date": "2025-10-01",
+    "fetched_at": "2026-10-21T09:20:00.134416",
+    "value": 2400000.0
+   },
+   {
+    "date": "2026-05-03",
+    "fetched_at": "2026-10-13T11:24:24.776253",
+    "value": 2733000.0
+   },
+   {
+    "date": "2026-05-11",
+    "fetched_at": "2026-10-21T09:20:00.141752",
+    "value": 2775000.0
+   },
+   {
+    "date": "2026-06-01",
+    "fetched_at": "2026-10-21T09:20:00.150169",
+    "value": 2728000.0
+   },
+   {
+    "date": "2026-07-01",
+    "fetched_at": "2026-10-21T09:20:00.157336",
+    "value": 2553000.0
+   },
+   {
+    "date": "2026-08-01",
+    "fetched_at": "2026-10-21T09:20:00.164511",
+    "value": 2527000.0
+   },
+   {
+    "date": "2026-09-01",
+    "fetched_at": "2026-10-21T09:20:00.171424",
+    "value": 2576000.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:00.179109",
+    "value": 2510000.0
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T07:01:59.102267",
+    "value": 2503000.0
+   }
+  ],
+  "ikk": [
+   {
+    "date": "2024-01-01",
+    "fetched_at": "2026-10-21T09:20:00.685241",
+    "value": 123.8
+   },
+   {
+    "date": "2024-02-01",
+    "fetched_at": "2026-10-21T09:20:00.692546",
+    "value": 123.1
+   },
+   {
+    "date": "2024-03-01",
+    "fetched_at": "2026-10-21T09:20:00.702125",
+    "value": 123.8
+   },
+   {
+    "date": "2024-04-01",
+    "fetched_at": "2026-10-21T09:20:00.712657",
+    "value": 127.7
+   },
+   {
+    "date": "2024-05-01",
+    "fetched_at": "2026-10-21T09:20:00.721551",
+    "value": 125.2
+   },
+   {
+    "date": "2024-06-01",
+    "fetched_at": "2026-10-21T09:20:00.729531",
+    "value": 123.3
+   },
+   {
+    "date": "2024-07-01",
+    "fetched_at": "2026-10-21T09:20:00.737620",
+    "value": 124.3
+   },
+   {
+    "date": "2024-08-01",
+    "fetched_at": "2026-10-21T09:20:00.745594",
+    "value": 124.4
+   },
+   {
+    "date": "2024-09-01",
+    "fetched_at": "2026-10-21T09:20:00.753576",
+    "value": 123.5
+   },
+   {
+    "date": "2024-10-01",
+    "fetched_at": "2026-10-21T09:20:00.760368",
+    "value": 121.1
+   },
+   {
+    "date": "2024-11-01",
+    "fetched_at": "2026-10-21T09:20:00.771761",
+    "value": 125.9
+   },
+   {
+    "date": "2024-12-01",
+    "fetched_at": "2026-10-21T09:20:00.780950",
+    "value": 127.7
+   },
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:00.790332",
+    "value": 127.2
+   },
+   {
+    "date": "2025-02-01",
+    "fetched_at": "2026-10-21T09:20:00.798845",
+    "value": 126.4
+   },
+   {
+    "date": "2025-03-01",
+    "fetched_at": "2026-10-21T09:20:00.806715",
+    "value": 121.1
+   },
+   {
+    "date": "2025-04-01",
+    "fetched_at": "2026-10-21T09:20:00.814094",
+    "value": 121.7
+   },
+   {
+    "date": "2025-05-01",
+    "fetched_at": "2026-10-21T09:20:00.823006",
+    "value": 117.5
+   },
+   {
+    "date": "2025-06-01",
+    "fetched_at": "2026-10-21T09:20:00.829802",
+    "value": 117.8
+   },
+   {
+    "date": "2025-07-01",
+    "fetched_at": "2026-10-21T09:20:00.836693",
+    "value": 118.1
+   },
+   {
+    "date": "2025-08-01",
+    "fetched_at": "2026-10-21T09:20:00.844036",
+    "value": 117.2
+   },
+   {
+    "date": "2025-09-01",
+    "fetched_at": "2026-10-21T09:20:00.850756",
+    "value": 115.0
+   },
+   {
+    "date": "2025-10-01",
+    "fetched_at": "2026-10-21T09:20:00.857850",
+    "value": 121.2
+   },
+   {
+    "date": "2025-12-01",
+    "fetched_at": "2026-10-21T09:20:00.865225",
+    "value": 123.5
+   },
+   {
+    "date": "2026-09-01",
+    "fetched_at": "2026-10-21T09:20:00.872546",
+    "value": 118.1
+   },
+   {
+    "date": "2026-10-13",
+    "fetched_at": "2026-10-13T06:48:59.955386",
+    "value": 125.0
+   }
+  ],
+  "inflation_yoy": [
+   {
+    "date": "2025-01-01",
+    "fetched_at": "2026-10-21T09:20:02.384714",
+    "value": 1.57
+   },
+   {
+    "date": "2025-02-01",
+    "fetched_at": "2026-10-21T09:20:02.393818",
+    "value": 1.8
+   },
+   {
+    "date": "2025-03-01",
+    "fetched_at": "2026-10-21T09:20:02.400968",
+    "value": 2.1
+   },
+   {
+    "date": "2025-04-01",
+    "fetched_at": "2026-10-21T09:20:02.410131",
+    "value": 2.3
+   },
+   {
+    "date": "2025-05-01",
+    "fetched_at": "2026-10-21T09:20:02.418938",
+    "value": 2.4
+   },
+   {
+    "date": "2025-06-01",
+    "fetched_at": "2026-10-21T09:20:02.427109",
+    "value": 2.6
+   },
+   {
+    "date": "2025-07-01",
+    "fetched_at": "2026-10-21T09:20:02.435342",
+    "value": 2.8
+   },
+   {
+    "date": "2025-08-01",
+    "fetched_at": "2026-10-21T09:20:02.447146",
+    "value": 3.0
+   },
+   {
+    "date": "2025-09-01",
+    "fetched_at": "2026-10-21T09:20:02.456030",
+    "value": 3.19
+   },
+   {
+    "date": "2025-10-01",
+    "fetched_at": "2026-10-21T09:20:02.470056",
+    "value": 3.1
+   },
+   {
+    "date": "2025-11-01",
+    "fetched_at": "2026-10-21T09:20:02.485097",
+    "value": 3.0
+   },
+   {
+    "date": "2025-12-01",
+    "fetched_at": "2026-10-21T09:20:02.495995",
+    "value": 2.9
+   },
+   {
+    "date": "2026-01-01",
+    "fetched_at": "2026-10-21T09:20:02.505052",
+    "value": 2.8
+   },
+   {
+    "date": "2026-02-01",
+    "fetched_at": "2026-10-21T09:20:02.514539",
+    "value": 2.7
+   },
+   {
+    "date": "2026-03-01",
+    "fetched_at": "2026-10-21T09:20:02.523327",
+    "value": 2.6
+   },
+   {
+    "date": "2026-04-01",
+    "fetched_at": "2026-10-21T09:20:02.532819",
+    "value": 2.5
+   },
+   {
+    "date": "2026-05-01",
+    "fetched_at": "2026-10-21T09:20:02.543254",
+    "value": 2.4
+   },
+   {
+    "date": "2026-06-01",
+    "fetched_at": "2026-10-21T09:20:02.550559",
+    "value": 2.3
+   },
+   {
+    "date": "2026-07-01",
+    "fetched_at": "2026-10-21T09:20:02.561173",
+    "value": 2.2
+   },
+   {
+    "date": "2026-08-01",
+    "fetched_at": "2026-10-21T09:20:02.570214",
+    "value": 2.1
+   },
+   {
+    "date": "2026-09-01",
+    "fetched_at": "2026-10-21T09:20:02.579609",
+    "value": 3.28
+   }
+  ],
+  "life_exp": [
+   {
+    "date": "1960-12-31",
+    "fetched_at": "2026-10-13T08:47:23.461512",
+    "value": 46.835
+   },
+   {
+    "date": "1961-12-31",
+    "fetched_at": "2026-10-13T08:47:23.453967",
+    "value": 47.385
+   },
+   {
+    "date": "1962-12-31",
+    "fetched_at": "2026-10-13T08:47:23.445991",
+    "value": 48.141
+   },
+   {
+    "date": "1963-12-31",
+    "fetched_at": "2026-10-13T08:47:23.437772",
+    "value": 48.742
+   },
+   {
+    "date": "1964-12-31",
+    "fetched_at": "2026-10-13T08:47:23.429395",
+    "value": 49.44
+   },
+   {
+    "date": "1965-12-31",
+    "fetched_at": "2026-10-13T08:47:23.421454",
+    "value": 42.762
+   },
+   {
+    "date": "1966-12-31",
+    "fetched_at": "2026-10-13T08:47:23.413690",
+    "value": 48.406
+   },
+   {
+    "date": "1967-12-31",
+    "fetched_at": "2026-10-13T08:47:23.405714",
+    "value": 51.309
+   },
+   {
+    "date": "1968-12-31",
+    "fetched_at": "2026-10-13T08:47:23.397719",
+    "value": 51.888
+   },
+   {
+    "date": "1969-12-31",
+    "fetched_at": "2026-10-13T08:47:23.389444",
+    "value": 52.588
+   },
+   {
+    "date": "1970-12-31",
+    "fetched_at": "2026-10-13T08:47:23.381649",
+    "value": 53.254
+   },
+   {
+    "date": "1971-12-31",
+    "fetched_at": "2026-10-13T08:47:23.373516",
+    "value": 53.823
+   },
+   {
+    "date": "1972-12-31",
+    "fetched_at": "2026-10-13T08:47:23.365033",
+    "value": 54.364
+   },
+   {
+    "date": "1973-12-31",
+    "fetched_at": "2026-10-13T08:47:23.356683",
+    "value": 54.916
+   },
+   {
+    "date": "1974-12-31",
+    "fetched_at": "2026-10-13T08:47:23.347955",
+    "value": 55.443
+   },
+   {
+    "date": "1975-12-31",
+    "fetched_at": "2026-10-13T08:47:23.340128",
+    "value": 55.998
+   },
+   {
+    "date": "1976-12-31",
+    "fetched_at": "2026-10-13T08:47:23.331450",
+    "value": 56.445
+   },
+   {
+    "date": "1977-12-31",
+    "fetched_at": "2026-10-13T08:47:23.323470",
+    "value": 57.09
+   },
+   {
+    "date": "1978-12-31",
+    "fetched_at": "2026-10-13T08:47:23.315331",
+    "value": 57.607
+   },
+   {
+    "date": "1979-12-31",
+    "fetched_at": "2026-10-13T08:47:23.306659",
+    "value": 58.18
+   },
+   {
+    "date": "1980-12-31",
+    "fetched_at": "2026-10-13T08:47:23.298667",
+    "value": 58.701
+   },
+   {
+    "date": "1981-12-31",
+    "fetched_at": "2026-10-13T08:47:23.290589",
+    "value": 59.096
+   },
+   {
+    "date": "1982-12-31",
+    "fetched_at": "2026-10-13T08:47:23.282077",
+    "value": 59.7
+   },
+   {
+    "date": "1983-12-31",
+    "fetched_at": "2026-10-13T08:47:23.273708",
+    "value": 60.343
+   },
+   {
+    "date": "1984-12-31",
+    "fetched_at": "2026-10-13T08:47:23.265941",
+    "value": 60.891
+   },
+   {
+    "date": "1985-12-31",
+    "fetched_at": "2026-10-13T08:47:23.257844",
+    "value": 61.387
+   },
+   {
+    "date": "1986-12-31",
+    "fetched_at": "2026-10-13T08:47:23.249071",
+    "value": 61.736
+   },
+   {
+    "date": "1987-12-31",
+    "fetched_at": "2026-10-13T08:47:23.240809",
+    "value": 62.087
+   },
+   {
+    "date": "1988-12-31",
+    "fetched_at": "2026-10-13T08:47:23.233004",
+    "value": 62.386
+   },
+   {
+    "date": "1989-12-31",
+    "fetched_at": "2026-10-13T08:47:23.224980",
+    "value": 62.883
+   },
+   {
+    "date": "1990-12-31",
+    "fetched_at": "2026-10-13T08:47:23.216304",
+    "value": 63.249
+   },
+   {
+    "date": "1991-12-31",
+    "fetched_at": "2026-10-13T08:47:23.206968",
+    "value": 63.703
+   },
+   {
+    "date": "1992-12-31",
+    "fetched_at": "2026-10-13T08:47:23.198935",
+    "value": 64.182
+   },
+   {
+    "date": "1993-12-31",
+    "fetched_at": "2026-10-13T08:47:23.189481",
+    "value": 64.851
+   },
+   {
+    "date": "1994-12-31",
+    "fetched_at": "2026-10-13T08:47:23.180847",
+    "value": 65.041
+   },
+   {
+    "date": "1995-12-31",
+    "fetched_at": "2026-10-13T08:47:23.172434",
+    "value": 65.263
+   },
+   {
+    "date": "1996-12-31",
+    "fetched_at": "2026-10-13T08:47:23.164250",
+    "value": 65.465
+   },
+   {
+    "date": "1997-12-31",
+    "fetched_at": "2026-10-13T08:47:23.155550",
+    "value": 65.774
+   },
+   {
+    "date": "1998-12-31",
+    "fetched_at": "2026-10-13T08:47:23.147442",
+    "value": 65.942
+   },
+   {
+    "date": "1999-12-31",
+    "fetched_at": "2026-10-13T08:47:23.139398",
+    "value": 66.001
+   },
+   {
+    "date": "2000-12-31",
+    "fetched_at": "2026-10-13T08:47:23.131037",
+    "value": 66.292
+   },
+   {
+    "date": "2001-12-31",
+    "fetched_at": "2026-10-13T08:47:23.122900",
+    "value": 66.583
+   },
+   {
+    "date": "2002-12-31",
+    "fetched_at": "2026-10-13T08:47:23.114367",
+    "value": 66.954
+   },
+   {
+    "date": "2003-12-31",
+    "fetched_at": "2026-10-13T08:47:23.106136",
+    "value": 67.134
+   },
+   {
+    "date": "2004-12-31",
+    "fetched_at": "2026-10-13T08:47:23.097480",
+    "value": 65.521
+   },
+   {
+    "date": "2005-12-31",
+    "fetched_at": "2026-10-13T08:47:23.088641",
+    "value": 67.531
+   },
+   {
+    "date": "2006-12-31",
+    "fetched_at": "2026-10-13T08:47:23.079346",
+    "value": 67.664
+   },
+   {
+    "date": "2007-12-31",
+    "fetched_at": "2026-10-13T08:47:23.070935",
+    "value": 67.914
+   },
+   {
+    "date": "2008-12-31",
+    "fetched_at": "2026-10-13T08:47:23.061687",
+    "value": 68.085
+   },
+   {
+    "date": "2009-12-31",
+    "fetched_at": "2026-10-13T08:47:23.051909",
+    "value": 68.267
+   },
+   {
+    "date": "2010-12-31",
+    "fetched_at": "2026-10-13T08:47:23.042169",
+    "value": 68.364
+   },
+   {
+    "date": "2011-12-31",
+    "fetched_at": "2026-10-13T08:47:23.033174",
+    "value": 68.629
+   },
+   {
+    "date": "2012-12-31",
+    "fetched_at": "2026-10-13T08:47:23.024260",
+    "value": 68.862
+   },
+   {
+    "date": "2013-12-31",
+    "fetched_at": "2026-10-13T08:47:23.015520",
+    "value": 69.064
+   },
+   {
+    "date": "2014-12-31",
+    "fetched_at": "2026-10-13T08:47:23.006992",
+    "value": 69.292
+   },
+   {
+    "date": "2015-12-31",
+    "fetched_at": "2026-10-13T08:47:22.997904",
+    "value": 69.52
+   },
+   {
+    "date": "2016-12-31",
+    "fetched_at": "2026-10-13T08:47:22.989414",
+    "value": 69.733
+   },
+   {
+    "date": "2017-12-31",
+    "fetched_at": "2026-10-13T08:47:22.980752",
+    "value": 69.953
+   },
+   {
+    "date": "2018-12-31",
+    "fetched_at": "2026-10-13T08:47:22.972936",
+    "value": 70.08
+   },
+   {
+    "date": "2019-12-31",
+    "fetched_at": "2026-10-13T08:47:22.965638",
+    "value": 70.349
+   },
+   {
+    "date": "2020-12-31",
+    "fetched_at": "2026-10-13T08:47:22.957446",
+    "value": 68.817
+   },
+   {
+    "date": "2021-12-31",
+    "fetched_at": "2026-10-13T08:47:22.949180",
+    "value": 67.452
+   },
+   {
+    "date": "2022-12-31",
+    "fetched_at": "2026-10-13T08:47:22.940635",
+    "value": 70.925
+   },
+   {
+    "date": "2023-12-31",
+    "fetched_at": "2026-10-13T08:47:22.932090",
+    "value": 71.146
+   },
+   {
+    "date": "2024-12-31",
+    "fetched_at": "2026-10-13T08:47:22.917163",
+    "value": 71.288
+   }
+  ],
+  "literacy": [
+   {
+    "date": "1980-12-31",
+    "fetched_at": "2026-10-13T08:47:24.047337",
+    "value": 67.3099975585938
+   },
+   {
+    "date": "1990-12-31",
+    "fetched_at": "2026-10-13T08:47:24.039421",
+    "value": 81.5199966430664
+   },
+   {
+    "date": "2004-12-31",
+    "fetched_at": "2026-10-13T08:47:24.031304",
+    "value": 90.379997253418
+   },
+   {
+    "date": "2006-12-31",
+    "fetched_at": "2026-10-13T08:47:24.023031",
+    "value": 91.9800033569336
+   },
+   {
+    "date": "2008-12-31",
+    "fetched_at": "2026-10-13T08:47:24.014895",
+    "value": 92.1900024414062
+   },
+   {
+    "date": "2009-12-31",
+    "fetched_at": "2026-10-13T08:47:24.006863",
+    "value": 92.5800018310547
+   },
+   {
+    "date": "2010-12-31",
+    "fetched_at": "2026-10-13T08:47:23.998775",
+    "value": 92.3199996948242
+   },
+   {
+    "date": "2011-12-31",
+    "fetched_at": "2026-10-13T08:47:23.990372",
+    "value": 92.8099975585938
+   },
+   {
+    "date": "2014-12-31",
+    "fetched_at": "2026-10-13T08:47:23.982125",
+    "value": 95.120002746582
+   },
+   {
+    "date": "2015-12-31",
+    "fetched_at": "2026-10-13T08:47:23.973842",
+    "value": 95.2200012207031
+   },
+   {
+    "date": "2016-12-31",
+    "fetched_at": "2026-10-13T08:47:23.965217",
+    "value": 95.379997253418
+   },
+   {
+    "date": "2018-12-31",
+    "fetched_at": "2026-10-13T08:47:23.956496",
+    "value": 95.6600036621094
+   },
+   {
+    "date": "2020-12-31",
+    "fetched_at": "2026-10-13T08:47:23.946858",
+    "value": 96.0
+   }
+  ],
+  "literacy_interest": [
+   {
+    "date": "2014-12-31",
+    "fetched_at": "2026-10-13T08:47:24.056754",
+    "value": 0.001
+   }
+  ],
+  "usd_idr": [
+   {
+    "date": "2024-01-02",
+    "fetched_at": "2026-10-21T09:20:00.413923",
+    "value": 15524.0
+   },
+   {
+    "date": "2024-02-01",
+    "fetched_at": "2026-10-21T09:20:00.421653",
+    "value": 15767.0
+   },
+   {
+    "date": "2024-03-01",
+    "fetched_at": "2026-10-21T09:20:00.428853",
+    "value": 15722.0
+   },
+   {
+    "date": "2024-04-02",
+    "fetched_at": "2026-10-21T09:20:00.436806",
+    "value": 15911.0
+   },
+   {
+    "date": "2024-05-02",
+    "fetched_at": "2026-10-21T09:20:00.445331",
+    "value": 16173.0
+   },
+   {
+    "date": "2024-06-03",
+    "fetched_at": "2026-10-21T09:20:00.453960",
+    "value": 16229.0
+   },
+   {
+    "date": "2024-07-01",
+    "fetched_at": "2026-10-21T09:20:00.461883",
+    "value": 16351.0
+   },
+   {
+    "date": "2024-08-01",
+    "fetched_at": "2026-10-21T09:20:00.470744",
+    "value": 16266.0
+   },
+   {
+    "date": "2024-09-02",
+    "fetched_at": "2026-10-21T09:20:00.481731",
+    "value": 15541.0
+   },
+   {
+    "date": "2024-10-01",
+    "fetched_at": "2026-10-21T09:20:00.490194",
+    "value": 15198.0
+   },
+   {
+    "date": "2024-11-01",
+    "fetched_at": "2026-10-21T09:20:00.497738",
+    "value": 15739.0
+   },
+   {
+    "date": "2024-12-02",
+    "fetched_at": "2026-10-21T09:20:00.505871",
+    "value": 15898.0
+   },
+   {
+    "date": "2025-01-02",
+    "fetched_at": "2026-10-21T09:20:00.513305",
+    "value": 16207.0
+   },
+   {
+    "date": "2025-02-03",
+    "fetched_at": "2026-10-21T09:20:00.523913",
+    "value": 16415.0
+   },
+   {
+    "date": "2025-03-03",
+    "fetched_at": "2026-10-21T09:20:00.532260",
+    "value": 16451.0
+   },
+   {
+    "date": "2025-04-01",
+    "fetched_at": "2026-10-21T09:20:00.539465",
+    "value": 16743.0
+   },
+   {
+    "date": "2025-05-02",
+    "fetched_at": "2026-10-21T09:20:00.547054",
+    "value": 16444.0
+   },
+   {
+    "date": "2025-06-02",
+    "fetched_at": "2026-10-21T09:20:00.554057",
+    "value": 16275.0
+   },
+   {
+    "date": "2025-07-01",
+    "fetched_at": "2026-10-21T09:20:00.560652",
+    "value": 16203.0
+   },
+   {
+    "date": "2025-08-01",
+    "fetched_at": "2026-10-21T09:20:00.568143",
+    "value": 16520.0
+   },
+   {
+    "date": "2025-09-01",
+    "fetched_at": "2026-10-21T09:20:00.575012",
+    "value": 16431.0
+   },
+   {
+    "date": "2025-10-01",
+    "fetched_at": "2026-10-21T09:20:00.582158",
+    "value": 16632.0
+   },
+   {
+    "date": "2025-11-03",
+    "fetched_at": "2026-10-21T09:20:00.589620",
+    "value": 16710.0
+   },
+   {
+    "date": "2025-12-01",
+    "fetched_at": "2026-10-21T09:20:00.595746",
+    "value": 16590.0
+   },
+   {
+    "date": "2026-01-02",
+    "fetched_at": "2026-10-21T09:20:00.602394",
+    "value": 16716.0
+   },
+   {
+    "date": "2026-02-02",
+    "fetched_at": "2026-10-21T09:20:00.611207",
+    "value": 16799.0
+   },
+   {
+    "date": "2026-03-02",
+    "fetched_at": "2026-10-21T09:20:00.618637",
+    "value": 16876.0
+   },
+   {
+    "date": "2026-04-01",
+    "fetched_at": "2026-10-21T09:20:00.625560",
+    "value": 16914.0
+   },
+   {
+    "date": "2026-05-04",
+    "fetched_at": "2026-10-21T09:20:00.632775",
+    "value": 17409.0
+   },
+   {
+    "date": "2026-06-01",
+    "fetched_at": "2026-10-21T09:20:00.640738",
+    "value": 17835.0
+   },
+   {
+    "date": "2026-07-01",
+    "fetched_at": "2026-10-21T09:20:00.651010",
+    "value": 17961.0
+   },
+   {
+    "date": "2026-08-03",
+    "fetched_at": "2026-10-21T09:20:00.659232",
+    "value": 17977.0
+   },
+   {
+    "date": "2026-09-01",
+    "fetched_at": "2026-10-21T09:20:00.668216",
+    "value": 17745.0
+   },
+   {
+    "date": "2026-10-01",
+    "fetched_at": "2026-10-21T09:20:00.676095",
+    "value": 17946.0
+   },
+   {
+    "date": "2026-10-12",
+    "fetched_at": "2026-10-13T08:47:22.352631",
+    "value": 17920.0
+   }
+  ]
+ }
+}

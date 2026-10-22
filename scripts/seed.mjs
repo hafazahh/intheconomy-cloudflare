@@ -131,11 +131,16 @@ const INDICATOR_CODES = {
   "FP.CPI.TOTL.ZG": "Inflasi",
   "BN.GSR.GNFS.CD": "Trade Balance",
 };
+// The key MUST equal the `series_key` the renderer reads. `render.ts` reads
+// `gini`, `life_exp`, `edu_exp`, `literacy` — the same names `app.py` reads —
+// so a differently named key here (the old `GINI_CODE` spelling) stores rows
+// under a name nothing reads and the card/chart silently stays empty.
+// Keep this in sync with `WB_SERIES` in `src/fetchers.ts`.
 const WB_SERIES = {
-  GINI_CODE: "SI.POV.GINI",
-  LIFE_EXP_CODE: "SP.DYN.LE00.IN",
-  EDU_EXP_CODE: "SE.XPD.TOTL.GD.ZS",
-  LITERACY_CODE: "SE.ADT.LITR.ZS",
+  gini: "SI.POV.GINI",
+  life_exp: "SP.DYN.LE00.IN",
+  edu_exp: "SE.XPD.TOTL.GD.ZS",
+  literacy: "SE.ADT.LITR.ZS",
 };
 const WB_FALLBACK = {
   life_exp: [

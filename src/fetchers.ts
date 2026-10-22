@@ -101,13 +101,27 @@ export async function fetchWithRetry(
 
 export const WB_API = "https://api.worldbank.org/v2/country/IDN/indicator";
 
-/** World Bank indicator code → time-series key (macro fetchers). */
-export const WB_SERIES: Record<string, string> = {
-  GINI_CODE: "SI.POV.GINI",
-  LIFE_EXP_CODE: "SP.DYN.LE00.IN",
-  EDU_EXP_CODE: "SE.XPD.TOTL.GD.ZS",
-  LITERACY_CODE: "SE.ADT.LITR.ZS",
-};
+/**
+ * World Bank indicator code per macro series key. The key MUST equal the
+ * `series_key` the renderer reads — `app.py` reads `gini`, `life_exp`,
+ * `edu_exp`, `literacy` (dashboard + macro KPI cards), so a differently named
+ * key here stores data under a name nothing reads: the card silently stays
+ * empty.
+ *
+ * The map is typed with an explicit key list rather than `Record<string, string>`
+ * on purpose: `Record<string, string>` accepts `WB_SERIES.GINI_CODE` at compile
+ * time and yields `undefined` at runtime, which fetches `.../indicator/undefined`
+ * and stores 0 rows. `satisfies` keeps autocomplete while `keyof typeof` makes
+ * any unknown key a compile error.
+ */
+export const WB_SERIES = {
+  gini: "SI.POV.GINI",
+  life_exp: "SP.DYN.LE00.IN",
+  edu_exp: "SE.XPD.TOTL.GD.ZS",
+  literacy: "SE.ADT.LITR.ZS",
+} as const satisfies Record<string, string>;
+
+export type WbSeriesKey = keyof typeof WB_SERIES;
 
 /** One World Bank observation. */
 export interface WbEntry {
@@ -856,11 +870,11 @@ export async function fetchAllMacro(
   if (usd.error) failures.push(`usd_idr: ${usd.error}`);
   total += usd.stored;
 
-  const series: Array<{ key: string; code: string; fallback: Array<[string, number]> }> = [
-    { key: "gini", code: WB_SERIES.GINI_CODE, fallback: [] },
-    { key: "life_exp", code: WB_SERIES.LIFE_EXP_CODE, fallback: WB_FALLBACK.life_exp },
-    { key: "edu_exp", code: WB_SERIES.EDU_EXP_CODE, fallback: WB_FALLBACK.edu_exp },
-    { key: "literacy", code: WB_SERIES.LITERACY_CODE, fallback: [] },
+  const series: Array<{ key: WbSeriesKey; code: string; fallback: Array<[string, number]> }> = [
+    { key: "gini", code: WB_SERIES.gini, fallback: [] },
+    { key: "life_exp", code: WB_SERIES.life_exp, fallback: WB_FALLBACK.life_exp },
+    { key: "edu_exp", code: WB_SERIES.edu_exp, fallback: WB_FALLBACK.edu_exp },
+    { key: "literacy", code: WB_SERIES.literacy, fallback: [] },
   ];
   for (const s of series) {
     const res = await storeWbSeries(db, s.key, s.code, s.fallback);

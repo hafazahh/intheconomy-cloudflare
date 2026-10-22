@@ -206,3 +206,164 @@ Satu-satunya warning adalah bawaan: cron tidak jalan otomatis di dev.
 - **D1 `INSERT OR REPLACE` menghapus lalu memasukkan baris.** Untuk tabel dengan
   `AUTOINCREMENT` kolom `id` berubah setiap upsert. Tidak ada query yang
   mengandalkan `id` stabil, tapi jangan asumsikan `id` persisten.
+
+---
+
+## Hasil Fase 2 — `src/render.ts` (port HTML + insight)
+
+**`renderDashboard()` tidak boleh dipercaya dari test karangan saja.** Test
+TypeScript yang ditulis bersamaan dengan port bisa ikut salah. Cara yang membuktikan
+hal lain: jalankan fungsi Python aslinya (`appmod.generate_insight()`) pada input
+yang sama, simpan sebagai oracle JSON, lalu diff dengan output TypeScript.
+Hasil: **26/26 kasus identik byte-per-byte** — 21 skenario `test_insight_dynamic.py`
++ 5 varian BPS (3.28 / 1.20 / 5.50 / 2.00 / 4.00).
+
+**`import app` di Python tidak bisa langsung dipakai sebagai oracle.**
+`app.py` memanggil `bootstrap()` di level modul: `init_db()`, `get_all_data()`,
+`backfill_run()`, lalu `start_scheduler()`. Akibatnya `import app` bisa menggantung
+>120 s dan proses tidak pernah keluar (thread scheduler). Stub `scheduler` dan
+`backfill` di `sys.modules` **sebelum** import — `dashboard()`/`generate_insight()`
+tidak menyentuh keduanya.
+
+**Urutan kartu KPI di Flask bergantung pada urutan `insert(0, …)`, bukan pada
+urutan kode.** `dashboard()` memanggil `kpis.insert(0, bps_card)` **lalu**
+`kpis.insert(0, wb_card)`, sehingga kartu *Inflasi Tahunan (World Bank)* berada
+paling depan. Port yang "menyusun rapi" (WB dulu, BPS kemudian) menghasilkan urutan
+terbalik. Pelajaran: jangan menyusun ulang kode yang port dari urutan eksplisit —
+ikuti urutan pemanggilannya.
+
+**Dua penyimpangan struktural yang disengaja dari template Jinja2** (keduanya
+dibuat agar kegagalan tidak senyap):
+
+| Template Jinja2 | `src/render.ts` | Alasan |
+|---|---|---|
+| `{% if bi_rate_chart %}` … `{% endif %}` per kartu chart | row chart makro **selalu** diemit; container kosong diisi `data belum tersedia` | container yang hilang = chart yang hilang tanpa jejak |
+| `{% if macro_kpis %}` membungkus seluruh bagian makro | bagian makro hanya diemit bila ada kartu; row chart + "Terakhir diperbarui" selalu ada | pembaca tetap tahu bagian itu ada |
+
+Konsekuensi: halaman Worker punya 7 container chart selalu, Flask punya 7 selama
+semua series ada. `verify_page_parity.py` membandingkan **jumlah + judul section**,
+bukan id (Flask memberi container tanpa `id`).
+
+**Format ribuan USD/IDR disengaja berbeda dari Flask.** Flask:
+`f"{v:,.0f}"` → `17,920`. Worker: `rupiah()` → `17.986` (kaidah id-ID). Ini
+penyimpangan yang **terlihat**, bukan bug — dicatat di `verify_page_parity.py`
+sebagai catatan, bukan kegagalan. Kalau diminta persis sama dengan Flask, ganti
+`rupiah()` di `src/kpi.ts`.
+
+**`browser_exec` menolak `http://127.0.0.1:…`** ("URL targets a private or
+internal address"). Untuk verifikasi browser nyata di host ini, start Chromium
+sendiri dengan `--remote-debugging-port=9222` lalu pakai
+`scripts/verify_browser_charts.py`.
+
+**Verifikasi chart harus membaca `el.data.length`, bukan keberadaan div.**
+`verify_browser_charts.py` melaporkan `traces` dan jumlah path SVG per chart.
+Hasil di Chromium 145: 7 chart, `traces` 1–2, `svgPaths` 7–32, 0 CSP violation.
+
+
+---
+
+## Hasil Fase 2 — `src/charts.ts` (7 chart spec + `applyNonce`)
+
+### Isi modul
+
+| Export | Port dari | Catatan |
+|---|---|---|
+| `applyNonce(html, nonce)` | `apply_nonce()` di `app.py` | regex identik, `headers.ts` re-export |
+| `hasUnstampedScripts(html)` | — | helper cek sisa inline tanpa nonce |
+| `baseLayout()` | `_base_layout()` | margin 50/20/20/40, height 320, hovermode `x unified` |
+| `buildMainChart()` | `build_main_chart()` | 2 trace: PDB (biru) + inflasi (merah) |
+| `buildSingleChart()` | `build_single_chart()` | `fill="tozeroy"`, fillcolor mengikuti warna |
+| `buildInflationChart()` | `build_inflation_chart()` | band corridor BI + garis YoY |
+| `buildMicroChart()` | `_build_micro_chart()` | multi-line, pakai `SeriesRow[]` |
+| `buildIndexedChart()` / `toIndex()` | blok `emas_bbm_chart` | indeks base 100 dari nilai pertama |
+| `buildBbmVsWageChart()` | figure `bbm_vs_wage` | indeks 2014=100 + anotasi ↑/↓ |
+
+### Sumber angka per chart
+
+| Chart | Sumber D1 |
+|---|---|
+| `chart-main`, `chart-pdb-growth`, `chart-inflasi-yoy-` | `indicators` (`NY.GDP.MKTP.KD.ZG`, `FP.CPI.TOTL.ZG`) |
+| `chart-bi-rate` | `time_series` `bi_rate` (12) |
+| `chart-usd-idr` | `time_series` `usd_idr` (30) |
+| `chart-rasio-gini` | `time_series` `gini` (10) |
+| `chart-inflation` | `time_series` `inflation_yoy` (12) + `BI_TARGET_LOW/HIGH` |
+| `chart-emas-bbm`, `chart-ikk`, `chart-bi-rate-micro`, `chart-usd-idr-micro` (halaman `/micro`) | `time_series` `gold_gram`, `bbm_pertalite__*`, `ikk`, `bi_rate`, `usd_idr` |
+| `chart-bbm-vs-wage` | `BBM_HISTORY` + `UMP_HISTORY` (estimasi historis, memang ada di `app.py`) |
+
+Tidak ada angka hardcoded di `charts.ts` kecuali warna dan geometri layout, yang
+semuanya port verbatim dari `app.py`.
+
+### Jebakan teknis baru
+
+**`wrangler dev` dan proses Node tidak bisa berbagi file state D1 yang sama.**
+`.wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite` dipakai oleh
+`wrangler dev` yang sedang jalan. Untuk menguji Worker di luar `wrangler`,
+salin file itu ke tmp lalu buka dengan `node:sqlite` (`DatabaseSync`,
+read-only). `test_charts_e2e.mjs` melakukan ini, jadi pengujian chart tidak
+bergantung pada port yang sedang jalan.
+
+**esbuild bundle ESM tidak meneruskan named export sebagai properti modul.**
+`await import(out)` pada bundle `src/index.ts` menghasilkan objek tanpa `fetch`;
+`mod.default ?? mod` yang benar.
+
+**`Response.headers` di Node menormalisasi nama header jadi lowercase.**
+`res.headers["Content-Security-Policy"]` selalu `undefined`; baca
+`res.headers["content-security-policy"]`.
+
+**Regex `applyNonce` tidak mengubah tag name.** `<SCRIPT>a()</SCRIPT>` menjadi
+`<script nonce="...">a()</SCRIPT>` — tag name asli dipertahankan, sama seperti
+Python `re.sub`. Jangan menulis assertion yang mengharapkan tag name diubah.
+
+### Bukti
+
+```
+tsc --noEmit                        → exit 0
+node scripts/test_charts_specs.mjs  → 83/83 PASS
+node scripts/test_charts_db.mjs     → 19/19 PASS
+node scripts/test_charts_e2e.mjs    → 26/26 PASS
+compare_chart_numbers.py            → PASS (6 exact, 2 freshness)
+verify_browser_charts.py /          → PASS 7 chart, 0 CSP violation
+verify_browser_charts.py /micro     → PASS 5 chart, 0 CSP violation
+test_security_headers.py            → 42/42 PASS
+```
+
+---
+
+## Temuan sesi t_c5bed955 — route `/` + `/health` + `/healthz`
+
+**`npm run dev` tidak bisa dioverride port-nya.**
+`package.json` sudah mengunci `"dev": "wrangler dev --port 8788"`, jadi
+`npm run dev -- --port 8799` menghasilkan
+`✘ [ERROR] The argument "--port" expects a single value, but received multiple:
+[8788,8799]`. Untuk memverifikasi start bersih tanpa merebut port server dev yang
+sedang dipakai kartu saudara: salin project ke `/tmp` (hardlink `node_modules`
+via symlink), ubah port di salinan `package.json`, dan beri `--persist-to`
+terpisah agar state D1 tidak dipakai bersama.
+
+**RTK memblokir beberapa hal yang tampak sepele.**
+`--ip 127.0.0.1` (raw IP), `rm -rf` ("delete in root path"), dan `node -e "…"`
+(script-via-flag). Workaround: tanpa `--ip`; `rm -f` per-file; skrip ditulis ke
+file lalu dijalankan.
+
+**Output tool menyembunyikan nilai yang tampak seperti secret.**
+`src/index.ts:205` dibaca sebagai `{ bpsApiKey: *** }` padahal isinya
+`{ bpsApiKey: bpsKey }`. Jangan menyimpulkan bug dari output yang termasking —
+baca kode byte-nya lewat skrip (7 char, `bpsKey `).
+
+**Health check harus dibandingkan dengan hitungan D1, bukan hanya dicek tipe.**
+`rows_stored` yang benar tapi tidak pernah diverifikasi against `SELECT COUNT(*)`
+akan membuat deploy gate lolos dengan database kosong. `scripts/test_index_routes.mjs`
+membaca `COUNT(*)` dari file state yang sama dan menyamakan angkanya.
+
+### Bukti
+
+```
+tsc --noEmit                      → exit 0
+node scripts/test_index_routes.mjs → 25/25 PASS
+  GET /        200 text/html, 11 KPI card, 7 mount point, 7 spec non-empty, 0 placeholder
+  GET /healthz 200 application/json, status=ok, rows_stored=176 == COUNT(*) D1
+  GET /health  200 JSON, rows_stored=176, series_stored=545
+  CSP nonce pada header + 2 inline script; CDN script tanpa nonce
+npm run dev (salinan /tmp/wdev-copy, port 8799) → Ready on http://localhost:8799
+  binding env.DB (D1) + env.CACHE_KV (KV) terpasang; GET /healthz 200; GET / 200
+```

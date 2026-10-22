@@ -352,3 +352,28 @@ bukan kegagalan. Cakupan micro ada di kartu `t_7c752775`.
 **Progress dicatat ke Obsidian:** `20_projects/indonesia-economic-dashboard.md`,
 `20_projects/indonesia-economic-dashboard/project-status.md`,
 `20_projects/project-index.md`, `10_memory/memory_index.md`.
+Repo GitHub dibuat + kode di-push (aksi Ketua, 2026-10-22).
+
+**Remote:** `origin` → `git@github.com:hafazahh/intheconomy-cloudflare.git`
+**URL:** https://github.com/hafazahh/intheconomy-cloudflare (public, branch `main`)
+**Commit:** `bd51579` — "feat: port dashboard ke Cloudflare Worker — render,
+charts, rute Hono" (46 file, +10469/-44)
+
+**Verifikasi remote (bukan self-report):**
+- `git ls-remote origin` → `refs/heads/main` = `bd51579…` = HEAD lokal
+- `gh repo view` → `visibility: PUBLIC`, `defaultBranchRef: main`,
+  `pushedAt: 2026-10-22T01:56:18Z`
+- `gh api …/git/trees/main?recursive=1` → 55 entri tree
+
+**Pra-pemeriksaan sebelum push ke repo publik:**
+- Scan secret (`api_key|secret|token|password|private_key|BEGIN … PRIVATE KEY`)
+  pada `*.ts`, `*.mjs`, `*.json`, `*.toml`, `*.md` → hanya komentar + type
+  hasil generate (`env.d.ts`). Tidak ada kredensial nyata. Aman untuk publik.
+
+**`.gitignore` ditambah:** `__pycache__/`, `*.pyc`, `.planning/`
+(`__pycache__/` sisa tooling parity Python; `.planning/` duplikat plan bernama —
+plan kanonik ada di root dan sudah ter-track).
+
+**Sisa:** belum ada salinan Drive untuk project ini
+(`~/GoogleDrive/AhliPemrograman/indonesia-economic-dashboard/` belum ada).
+Repo Flask juga tidak punya hook `post-commit`, jadi arsip Drive saat ini manual.
